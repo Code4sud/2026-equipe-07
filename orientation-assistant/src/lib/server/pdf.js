@@ -121,7 +121,7 @@ export async function extractRapport(data, nom) {
 		// chargement.promise = une promesse qui se résout quand le PDF est entièrement analysé.
 		// "await" attend ce moment ; doc contient alors le document (nombre de pages, getPage()...).
 		// Si le fichier n'est pas un PDF valide, la promesse échoue et on passe dans le catch.
-		doc = await chargement.promise;
+		doc = await chargement.promise; //=> avec await => attendre le résultat!
 	} catch {
 
 		// Le fichier n'est pas un PDF valide (ou il est corrompu) :

@@ -13,7 +13,8 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"test:pdf": "node --test tests/pdf.test.js",
-		"extract": "node scripts/extract-pdf.js"
+		"extract": "node scripts/extract-pdf.js",
+		"build:knowledge": "node scripts/build-knowledge.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "^6.0.2",
