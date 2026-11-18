@@ -9,7 +9,7 @@ _Deux ou trois phrases : le problème, la solution, pour qui._
 ## Lancer le projet
 
 ```bash
-# Comment installer et démarrer, en 5 lignes maximum
+# Comment installer et démarrer, en 5 lignes maximum.
 ```
 
 ## Publier sur le site du hackathon
