@@ -4,6 +4,7 @@ Projet réalisé à Nice les 18, 19 et 20 novembre 2026, sur le thème **« L'or
 
 ## Le projet
 
+__Sujet__: L'assistant d'exploration des métiers
 _Deux ou trois phrases : le problème, la solution, pour qui._
 
 ## Lancer le projet
