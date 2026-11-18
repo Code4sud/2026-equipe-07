@@ -10,7 +10,14 @@ _Deux ou trois phrases : le problème, la solution, pour qui._
 ## Lancer le projet
 
 ```bash
-# Comment installer et démarrer, en 5 lignes maximum.
+# ssh
+git clone git@github.com:Code4sud/2026-equipe-07.git
+# https
+git clone https://github.com/Code4sud/2026-equipe-07.git
+# ---
+cd 2026-equipe-07.git
+npm install
+npm run dev -- --open
 ```
 
 ## Publier sur le site du hackathon
