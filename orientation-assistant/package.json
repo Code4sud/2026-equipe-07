@@ -17,6 +17,7 @@
 		"build:knowledge": "node scripts/build-knowledge.js",
 		"correspondances": "node scripts/propose-correspondances.js",
 		"test:knowledge": "node --test tests/knowledge.test.js",
+		"test:llm": "node --env-file=../.env scripts/test-llm.js",
 		"test": "node --test"
 	},
 	"devDependencies": {
