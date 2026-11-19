@@ -47,6 +47,7 @@ export async function validerPdf(fichier, tailleMax = TAILLE_MAX_PDF) {
 }
 
 /** Nom de fichier affichable : sans dossier, sans caractères de contrôle, 100 caractères max */
+/** @param {unknown} nom */
 export function nomSur(nom) {
     const base = String(nom ?? '').split(/[\\/]/).pop() ?? '';
     // eslint-disable-next-line no-control-regex
@@ -79,4 +80,5 @@ export function validerQuestion(question) {
 }
 
 /** Format des identifiants créés par pdf.js : « z2-m3 » */
+/** @type {(id: unknown) => id is string} */
 export const validerId = (id) => typeof id === 'string' && /^z[1-5]-m\d{1,2}$/.test(id);

@@ -6,7 +6,7 @@ import { error, redirect } from '@sveltejs/kit';
 import { lireSession, COOKIE_SID } from '#lib/server/session.js';
 import { validerId } from '#lib/server/validation.js';
 import { ficheMetier } from '#lib/server/knowledge.js';
-import { construireContexte, suggestionsPour } from '#lib/server/rag.js';
+import { SUGGESTIONS } from '#lib/server/rag.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export function load({ params, cookies }) {
@@ -40,6 +40,7 @@ export function load({ params, cookies }) {
                 : null,
             onisep_url: fiche.onisep_url
         },
-        suggestions: suggestionsPour(construireContexte(metier, zone, fiche))
+        // Les 3 questions du sujet, proposées sous le chat
+        suggestions: SUGGESTIONS
     };
 }

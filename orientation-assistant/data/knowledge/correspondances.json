@@ -343,8 +343,8 @@
   },
   "agent service restauration": {
     "intitule": "Agent de service en restauration",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1803",
+    "libelle_rome": "Serveur / Serveuse en restauration",
     "onisep_url": null,
     "candidats": [
       {
@@ -366,8 +366,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 9
   },
   "agent voyage": {
@@ -1879,8 +1879,8 @@
   },
   "cuisinier restauration rapide": {
     "intitule": "Cuisinier en restauration rapide",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1603",
+    "libelle_rome": "Equipier polyvalent / Equipière polyvalente de restauration rapide",
     "onisep_url": null,
     "candidats": [
       {
@@ -1902,8 +1902,8 @@
         "score": 0.57
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 6
   },
   "demonstrateur produit": {
@@ -2783,8 +2783,8 @@
   },
   "hote accueil restauration": {
     "intitule": "Hôte d'accueil en restauration",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1803",
+    "libelle_rome": "Serveur / Serveuse en restauration",
     "onisep_url": null,
     "candidats": [
       {
@@ -2806,8 +2806,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 6
   },
   "hotesse air steward": {
@@ -3692,8 +3692,8 @@
   },
   "praticien activite physique adaptee apa": {
     "intitule": "Praticien en Activité Physique Adaptée (APA)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "J1415",
+    "libelle_rome": "Enseignant / Enseignante en activité physique adaptée (EAPA)",
     "onisep_url": null,
     "candidats": [
       {
@@ -3715,8 +3715,8 @@
         "score": 0.6
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 8
   },
   "preparateur physique": {

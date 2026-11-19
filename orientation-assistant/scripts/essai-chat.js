@@ -11,7 +11,7 @@ import { readFile } from 'node:fs/promises';
 import { basename } from 'node:path';                       // "data/rapports/x.pdf" -> "x.pdf"
 import { extractRapport } from '../src/lib/server/pdf.js';  // étape 1 : lire le PDF
 import { repondre } from '../src/lib/server/rag.js';        // étape 5 : sources + vérification
-import { discuter } from '../src/lib/server/ollama.js';     // l'appel réel au modèle
+import { chat } from '../src/lib/server/ollama.js';         // l'appel réel au modèle
 
 // process.argv = ["node", "scripts/essai-chat.js", "<pdf>", "<id>", "<question>"]
 // slice(2) saute les 2 premiers ; un argument absent vaut undefined
@@ -37,7 +37,7 @@ if (!question) {
 // Adresse et modèle d'Ollama ; ?? = valeur par défaut si la variable n'existe pas
 const config = {
     url: process.env.OLLAMA_URL ?? 'http://localhost:11434',
-    modele: process.env.LLM_MODEL ?? ''
+    modele: process.env.LLM_MODEL ?? 'qwen2.5:3b' // même valeur par défaut que ollama.js
 };
 
 // || : si le nom du modèle est vide, on affiche un rappel à la place
@@ -46,7 +46,7 @@ console.log(`Modèle : ${config.modele || '(LLM_MODEL non défini)'} sur ${confi
 const debut = Date.now(); // pour mesurer le temps de réponse (en millisecondes)
 
 // On donne à repondre() une fonction qui appelle le VRAI Ollama (dans les tests : un faux modèle)
-const r = await repondre({ question, rapport, metierId }, (messages) => discuter(messages, config));
+const r = await repondre({ question, rapport, metierId }, (messages) => chat(messages, { timeoutMs: 120_000, options: { temperature: 0.2 } }));
 
 // Statut (ok / insuffisant / erreur) et durée en secondes, avec 1 décimale
 console.log(`[${r.statut}] en ${((Date.now() - debut) / 1000).toFixed(1)} s\n`);
