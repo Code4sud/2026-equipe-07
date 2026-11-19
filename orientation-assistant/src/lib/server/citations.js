@@ -1,4 +1,5 @@
 // =============================================================================
+
 // citations.js — Vérifie les citations [n] d'une réponse du modèle
 // -----------------------------------------------------------------------------
 // Anti-hallucination EN CODE (pas seulement dans le prompt) :
@@ -9,10 +10,10 @@
 
 // Message exact demandé par l'équipe (prompt_message_2) quand on ne peut pas répondre.
 // Entre guillemets doubles "..." car le texte contient une apostrophe (d'informations).
-export const MESSAGE_REPLI =
+
+mmllmexport const MESSAGE_REPLI =
     "Je ne dispose pas d'informations suffisamment fiables dans les sources disponibles pour répondre à cette question.";
 
-/**
  * Une source envoyée au modèle (construite par rag.js)
  * @typedef {object} Source
  * @property {number} n numéro cité dans la réponse : [1], [2]...

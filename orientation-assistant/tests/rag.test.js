@@ -1,3 +1,4 @@
+
 // Lancer : npm run test:rag   (sans Ollama ni PDF : rapport FICTIF + faux modèle)
 import { test } from 'node:test';          // test('nom', fonction) = déclare un test
 import assert from 'node:assert/strict';   // assert.xxx = vérifie ; si c'est faux, le test échoue
