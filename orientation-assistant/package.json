@@ -14,7 +14,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"test:pdf": "node --test tests/pdf.test.js",
 		"extract": "node scripts/extract-pdf.js",
-		"build:knowledge": "node scripts/build-knowledge.js"
+		"build:knowledge": "node scripts/build-knowledge.js",
+		"correspondances": "node scripts/propose-correspondances.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "^6.0.2",
