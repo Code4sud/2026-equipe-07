@@ -19,7 +19,8 @@
 		"test:knowledge": "node --test tests/knowledge.test.js",
 		"test": "node --test",
 		"test:rag": "node --test tests/rag.test.js",
-		"chat": "node --env-file=.env scripts/essai-chat.js"
+		"chat": "node --env-file=.env scripts/essai-chat.js",
+		"start": "node --env-file-if-exists=.env build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "^6.0.2",
@@ -27,6 +28,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@types/node": "^26",
 		"svelte": "^5.57.3",
+		"typescript": "^6.0.3",
 		"vite": "^8.3.8"
 	},
 	"dependencies": {
