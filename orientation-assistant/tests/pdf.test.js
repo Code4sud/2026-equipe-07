@@ -62,6 +62,6 @@ test('un faux PDF est refusé avec le code PDF_ILLISIBLE', async () => {
 	
 	await assert.rejects(                                                     // rejects : la promesse DOIT échouer
 		extractRapport(new TextEncoder().encode('pas un pdf'), 'faux.pdf'),   // du texte transformé en octets
-		(err) => err.code === 'PDF_ILLISIBLE'                                 // ...et avec ce code-là
+		(/** @type {any} */ err) => err.code === 'PDF_ILLISIBLE'              // ...et avec ce code-là
 	);
 });
