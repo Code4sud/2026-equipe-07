@@ -85,7 +85,9 @@
       <!-- Bouton contour (secondaire), même forme que "Importer" -->
       <button
         type="submit"
+
         class="flex cursor-pointer gap-2 items-center rounded-2xl h-8 px-4 border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-neutral-50">
+
         <Trash2 size={16} />
         <span>Supprimer mes données</span>
       </button>
