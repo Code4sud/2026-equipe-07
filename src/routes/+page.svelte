@@ -1,6 +1,8 @@
 <script>
   import ImportRapport from "#lib/components/ImportRapport.svelte";
+  import Chat from "#lib/components/Chat.svelte";
   import { enhance } from "$app/forms";
+  import { Trash2 } from "@lucide/svelte";
 
   // data.rapport = résumé du rapport importé (load de +page.server.js), ou null
   // form = résultat de la dernière action (importReport ou supprimer)
@@ -78,9 +80,15 @@
       </div>
     {/each}
 
-    <!-- Droit à l'oubli : efface la session et le cookie (action "supprimer" de +page.server.js) -->
+  <!-- Droit à l'oubli : efface la session et le cookie (action "supprimer" de +page.server.js) -->
     <form method="POST" action="?/supprimer" use:enhance>
-      <button type="submit" class="text-sm underline">Supprimer mes données</button>
+      <!-- Bouton contour (secondaire), même forme que "Importer" -->
+      <button
+        type="submit"
+        class="flex cursor-pointer gap-2 items-center rounded-2xl h-8 px-4 border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-neutral-50">
+        <Trash2 size={16} />
+        <span>Supprimer mes données</span>
+      </button>
     </form>
   </section>
 {/if}
@@ -113,7 +121,7 @@
     <p>Choisis un métier ci-dessus.</p>
   {:else}
     <p>Tu parles de : <strong>{metierActif.intitule}</strong></p>
-    <!-- Ici : <Chat metier={metierActif} /> (composant de Denys) -->
+    <Chat metier={metierActif} />
   {/if}
 </section>
 
