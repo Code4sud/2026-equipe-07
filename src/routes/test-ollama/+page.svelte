@@ -54,6 +54,34 @@
 	function effacer() {
 		messages = [];
 	}
+
+	let rapport = $state(null); // { fichier, zones, metiers[] }
+	let erreurPdf = $state('');
+	let envoiPdf = $state(false);
+
+	async function importerPdf(event) {
+		const fichier = event.currentTarget.files?.[0];
+		if (!fichier) return;
+		erreurPdf = '';
+		envoiPdf = true;
+		try {
+			const fd = new FormData();
+			fd.append('rapport-pdf', fichier);
+			const res = await fetch('/api/test-ollama', { method: 'PUT', body: fd });
+			const data = await res.json();
+			if (res.ok) rapport = data.rapport;
+			else erreurPdf = data.erreur ?? 'Erreur';
+		} catch {
+			erreurPdf = 'Le serveur SvelteKit ne répond pas.';
+		} finally {
+			envoiPdf = false;
+		}
+	}
+
+	async function retirerPdf() {
+		await fetch('/api/test-ollama', { method: 'DELETE' });
+		rapport = null;
+	}
 </script>
 
 <svelte:head>
@@ -76,6 +104,18 @@
 			<p class="ok">✓ Connecté à <code>{etat.url}</code> — modèle <code>{etat.modele}</code> installé</p>
 		{/if}
 		<button type="button" onclick={verifier}>Revérifier</button>
+	</section>
+
+	<section class="etat">
+		{#if rapport}
+			<p class="ok">✓ Rapport « {rapport.fichier ?? 'PDF'} » : {rapport.metiers.length} métiers — {rapport.metiers.join(', ')}</p>
+			<button type="button" onclick={retirerPdf}>Retirer</button>
+		{:else}
+			<label for="pdf">Rapport PDF (optionnel) :</label>
+			<input id="pdf" type="file" accept="application/pdf" onchange={importerPdf} disabled={envoiPdf} />
+			{#if envoiPdf}<p class="petit">Analyse du PDF…</p>{/if}
+		{/if}
+		{#if erreurPdf}<p class="ko">{erreurPdf}</p>{/if}
 	</section>
 
 	<section class="fil" aria-label="Conversation">
