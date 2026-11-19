@@ -10,16 +10,17 @@ _Deux ou trois phrases : le problème, la solution, pour qui._
 
 ## Lancer le projet
 
+L'application (SvelteKit + Node.js) est dans le sous-dossier `orientation-assistant/` : toutes les commandes se lancent depuis ce dossier. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) lancé en local.
+
 ```bash
-# ssh
-git clone git@github.com:Code4sud/2026-equipe-07.git
-# https
-git clone https://github.com/Code4sud/2026-equipe-07.git
-# ---
-cd 2026-equipe-07.git
+cd orientation-assistant
 npm install
-npm run dev -- --open
+npm run dev
 ```
+
+Pourquoi un sous-dossier : le workflow GitHub Pages du dépôt lance `npm run build` s'il trouve un `package.json` à la racine et publie `dist/`. Notre application est un serveur Node (adapter-node, sortie `build/`), qui ne peut pas tourner sur GitHub Pages. La racine garde donc `index.html`, `projet.json` et `captures/` pour la fiche du hackathon.
+
+Les Rapports des Possibles ne sont pas dans le dépôt (`orientation-assistant/data/rapports/` est ignoré par git) : les copier à la main pour les tests (`npm run test:pdf`).
 
 ## Publier sur le site du hackathon
 
