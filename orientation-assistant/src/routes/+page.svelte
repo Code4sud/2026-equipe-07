@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    /** @type {import('./$types').PageServerLoad} */
+    let { data } = $props();
+</script>
+
+<pre>{JSON.stringify(data, null, 4)}</pre>
