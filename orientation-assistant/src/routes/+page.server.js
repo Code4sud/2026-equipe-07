@@ -7,10 +7,10 @@
 
 import { fail, redirect } from '@sveltejs/kit';
 import { dev } from '$app/environment';
-import { extractRapport, PdfError } from '$lib/server/pdf.js';
-import { validerPdf } from '$lib/server/validation.js';
-import { ficheMetier } from '$lib/server/knowledge.js';
-import { creerSession, lireSession, supprimerSession, COOKIE_SID, DUREE_SESSION_MS } from '$lib/server/session.js';
+import { extractRapport, PdfError } from '#lib/server/pdf.js';
+import { validerPdf } from '#lib/server/validation.js';
+import { ficheMetier } from '#lib/server/knowledge.js';
+import { creerSession, lireSession, supprimerSession, COOKIE_SID, DUREE_SESSION_MS } from '#lib/server/session.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export function load({ cookies }) {

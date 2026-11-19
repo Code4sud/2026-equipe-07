@@ -7,10 +7,10 @@
 // =============================================================================
 
 import { json } from '@sveltejs/kit';
-import { lireSession, COOKIE_SID } from '$lib/server/session.js';
-import { validerId, validerQuestion } from '$lib/server/validation.js';
-import { ficheMetier } from '$lib/server/knowledge.js';
-import { repondre } from '$lib/server/rag.js';
+import { lireSession, COOKIE_SID } from '#lib/server/session.js';
+import { validerId, validerQuestion } from '#lib/server/validation.js';
+import { ficheMetier } from '#lib/server/knowledge.js';
+import { repondre } from '#lib/server/rag.js';
 
 const TAILLE_MAX_CORPS = 4 * 1024; // 4 Ko : largement assez pour une question de 500 caractères
 

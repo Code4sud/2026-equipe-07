@@ -3,10 +3,10 @@
 // =============================================================================
 
 import { error, redirect } from '@sveltejs/kit';
-import { lireSession, COOKIE_SID } from '$lib/server/session.js';
-import { validerId } from '$lib/server/validation.js';
-import { ficheMetier } from '$lib/server/knowledge.js';
-import { construireContexte, suggestionsPour } from '$lib/server/rag.js';
+import { lireSession, COOKIE_SID } from '#lib/server/session.js';
+import { validerId } from '#lib/server/validation.js';
+import { ficheMetier } from '#lib/server/knowledge.js';
+import { construireContexte, suggestionsPour } from '#lib/server/rag.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export function load({ params, cookies }) {
