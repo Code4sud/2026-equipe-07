@@ -6,17 +6,31 @@ Projet réalisé à Nice les 18, 19 et 20 novembre 2026, sur le thème **« L'or
 
 __Sujet__: L'assistant d'exploration des métiers
 
-_Deux ou trois phrases : le problème, la solution, pour qui._
+**OrienTi** aide le jeune qui sort du Centre des Possibles avec son Rapport des Possibles : une vingtaine de métiers, souvent inconnus, répartis en cinq zones de durée de formation. Il importe son rapport PDF, choisit un métier et pose ses questions (« c'est quoi ? », « quel diplôme ? », « sans le bac ? ») à un assistant IA open weight (Qwen 2.5 via Ollama, en local). Les réponses s'appuient sur son rapport et sur les fiches ROME 4.0 de France Travail, reliées aux métiers du rapport par une correspondance vérifiée à la main (171 intitulés).
+
+### Comment ça marche
+
+| Étape | Fichier |
+|---|---|
+| Extraction du PDF (zones, métiers, descriptions, pages), en mémoire | `src/lib/server/pdf.js` |
+| Session d'une heure maximum, bouton « Supprimer mes données » | `src/lib/server/session.js` |
+| Fiches ROME / ONISEP (open data) et correspondances vérifiées | `data/knowledge/`, `src/lib/server/knowledge.js` |
+| Sources numérotées, contrôle des citations, réponse « je ne sais pas » | `src/lib/server/rag.js`, `citations.js`, route `/api/chat` |
+| Appel au modèle (Ollama local) | `src/lib/server/ollama.js` |
+| Chat de la page d'accueil | `src/lib/components/Chat.svelte`, route `/api/ollama` (mode dev uniquement) |
 
 ## Lancer le projet
 
-Application SvelteKit + Node.js, à la racine du dépôt. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) lancé en local.
+Application SvelteKit + Node.js, à la racine du dépôt. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) installé et lancé.
 
 ```bash
 npm install
 cp .env.example .env
+ollama pull qwen2.5:3b
 npm run dev
 ```
+
+Ouvrir http://localhost:5173 et importer un Rapport des Possibles (PDF). Le chat utilise `npm run dev` : sa route `/api/ollama` renvoie 404 en production (`npm start`).
 
 GitHub Pages : le workflow du dépôt lance `npm run build` puis publie `dist/`. Notre application est un serveur Node (adapter-node, sortie `build/`) qui ne peut pas tourner sur GitHub Pages : après le build, `scripts/pages.js` copie dans `dist/` la page statique du hackathon (`index.html`, `captures/`).
 
@@ -84,8 +98,7 @@ Toute la doc : https://orientation.code4sud.fr/doc/
 
 ## Démo en ligne
 
-Si votre projet est un site sans serveur, il est publié automatiquement sur GitHub Pages à chaque push :
-`https://code4sud.github.io/2026-equipe-07/`. Reportez cette adresse dans le champ `demo` de `projet.json`.
+Pas de démo en ligne : OrienTi a besoin d'un serveur Node et d'Ollama, ce que GitHub Pages ne fournit pas. La démonstration se fait en local (`npm run dev`), le champ `demo` de `projet.json` reste vide. L'adresse `https://code4sud.github.io/2026-equipe-07/` n'affiche que la page statique du hackathon.
 
 ## Licence
 
