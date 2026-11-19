@@ -10,7 +10,7 @@
 
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { cle } from './normaliser.js';
+import { cle, formeMasculine } from './normaliser.js';
 
 // Chemin depuis le dossier où l'appli est lancée => orientation-assistant/ !!
 const DOSSIER = resolve('data/knowledge');
@@ -80,6 +80,34 @@ export function ficheMetier(intitule) {
 
     // Vérifié => on renvoie tout ce que rag.js pourra citer
     return { statut: 'verifie', code_rome: c.code_rome, rome: fiche, onisep_url: c.onisep_url };
+}
+
+/**
+ * Cherche dans rome.json les fiches dont un intitulé (libellé ou appellation) apparaît dans la question,
+ * ou contient le terme entre guillemets. Renvoie leurs appellations (métiers proches).
+ * @param {string} question
+ * @param {number} [max] nombre maximum de fiches
+ * @returns {{ code: string, libelle: string, appellations: string[], version: string }[]}
+ */
+export function metiersProches(question, max = 3) {
+    const { rome } = charger();
+    const q = cle(question);
+    const citation = question.match(/["«“]([^"»”]{3,80})["»”]/)?.[1];
+    const terme = citation ? cle(citation) : '';
+    if (!q) return [];
+
+    const trouves = [];
+    for (const [code, fiche] of Object.entries(rome)) {
+        let score = 0;
+        for (const nom of [fiche.libelle, ...(fiche.appellations ?? [])]) {
+            const c = cle(formeMasculine(nom));
+            if (c.length < 4) continue;
+            if (` ${q} `.includes(` ${c} `)) score += 2 + c.split(' ').length; // l'intitulé est dans la question
+            else if (terme && ` ${c} `.includes(` ${terme} `)) score += 1;  // la question est dans l'intitulé
+        }
+        if (score) trouves.push({ score, code, libelle: fiche.libelle, appellations: fiche.appellations ?? [], version: fiche.version });
+    }
+    return trouves.sort((a, b) => b.score - a.score).slice(0, max);
 }
 
 /**

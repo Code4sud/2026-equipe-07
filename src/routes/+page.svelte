@@ -1,5 +1,6 @@
 <script>
   import ImportRapport from "#lib/components/ImportRapport.svelte";
+  import Chat from "#lib/components/Chat.svelte";
   import { enhance } from "$app/forms";
   import { Trash2 } from "@lucide/svelte";
 
@@ -79,13 +80,14 @@
       </div>
     {/each}
 
-    <!-- Droit à l'oubli : efface la session et le cookie (action "supprimer" de +page.server.js) -->
+  <!-- Droit à l'oubli : efface la session et le cookie (action "supprimer" de +page.server.js) -->
     <form method="POST" action="?/supprimer" use:enhance>
       <!-- Bouton contour (secondaire), même forme que "Importer" -->
       <button
         type="submit"
-        class="flex cursor-pointer gap-2 items-center rounded-2xl h-8 px-4 border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-neutral-50"
-      >
+
+        class="flex cursor-pointer gap-2 items-center rounded-2xl h-8 px-4 border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-neutral-50">
+
         <Trash2 size={16} />
         <span>Supprimer mes données</span>
       </button>
@@ -116,13 +118,19 @@
 <section class="flex flex-col gap-2 mx-8 mb-8">
   <p class="font-semibold text-lg">Pose ta question</p>
   {#if !data.rapport}
-    <p>Importe ton rapport pour poser des questions sur tes métiers.</p>
+    <p>
+      Pose ta question librement, ou importe ton rapport ci-dessus pour des
+      réponses personnalisées.
+    </p>
   {:else if !metierActif}
-    <p>Choisis un métier ci-dessus.</p>
+    <p>
+      Choisis un métier ci-dessus pour des réponses ciblées, ou pose une
+      question libre (ton rapport est pris en compte).
+    </p>
   {:else}
     <p>Tu parles de : <strong>{metierActif.intitule}</strong></p>
-    <!-- Ici : <Chat metier={metierActif} /> (composant de Denys) -->
   {/if}
+  <Chat metier={metierActif} />
 </section>
 
 <!-- <pre>{JSON.stringify(data, null, 4)}</pre> -->
