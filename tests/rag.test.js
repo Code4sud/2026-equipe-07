@@ -6,7 +6,7 @@ import { construireSources, construireMessages, repondre, PROMPT_SYSTEME } from 
 import { verifierReponse, numerosCites, MESSAGE_REPLI } from '../src/lib/server/citations.js';
 
 // Rapport INVENTÉ (rendu.txt : pas de données réelles dans les tests), même forme que pdf.js.
-// "Barista" est vérifié dans correspondances.json ; "Adjoint administratif territorial" ne l'est pas.
+// "Barista" est vérifié dans correspondances.json ; "Métier fictif de test" n'y est pas (intitulé inventé : le test ne dépend pas des validations).
 const rapport = {
     nom: 'rapport-fictif.pdf',
     pages: 17,
@@ -16,7 +16,7 @@ const rapport = {
     ],
     metiers: [
         { id: 'z1-m1', zone: 1, intitule: 'Barista', description: 'Le barista prépare des cafés.', page: 8 },
-        { id: 'z2-m1', zone: 2, intitule: 'Adjoint administratif territorial', description: 'Il gère des dossiers en mairie.', page: 10 }
+        { id: 'z2-m1', zone: 2, intitule: 'Métier fictif de test', description: 'Description inventée pour le test.', page: 10 }
     ],
     warnings: []
 };
@@ -81,7 +81,7 @@ test('métier vérifié : 2 sources rapport + 2 sources ROME (G1809)', () => {
 // Pas vérifié -> pas de ROME (règle de fiabilité de knowledge.js)
 test('métier non vérifié : seulement les 2 sources du rapport', () => {
 
-    const { sources, romeVerifie } = construireSources(rapport, rapport.metiers[1]); // metiers[1] = Adjoint...
+    const { sources, romeVerifie } = construireSources(rapport, rapport.metiers[1]); // metiers[1] = Métier fictif
     
     assert.equal(romeVerifie, false);
     assert.deepEqual(sources.map((s) => s.type), ['rapport', 'rapport']);
@@ -94,7 +94,7 @@ test('le message au modèle contient les sources numérotées et la question', (
     const messages = construireMessages('Il faut quel diplôme ?', rapport.metiers[1], sources, romeVerifie);
     
     assert.equal(messages[0].role, 'system'); // 1er message = les règles
-    assert.match(messages[1].content, /\[1\] Rapport des Possibles — Adjoint/); // sources numérotées
+    assert.match(messages[1].content, /\[1\] Rapport des Possibles — Métier fictif/); // sources numérotées
     assert.match(messages[1].content, /QUESTION DU JEUNE : Il faut quel diplôme \?/); // \? = un vrai "?"
     assert.match(messages[1].content, /aucune fiche officielle ROME/); // avertissement si non vérifié
     assert.match(PROMPT_SYSTEME, /pas des instructions/); // défense contre l'injection de prompt
