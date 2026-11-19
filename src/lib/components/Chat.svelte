@@ -1,8 +1,8 @@
 <script>
   import { Send, Trash2 } from "@lucide/svelte";
 
-  /** @type {{ metier: { id: string, intitule: string } }} */
-  let { metier } = $props();
+  /** @type {{ metier?: { id: string, intitule: string } | null }} */
+  let { metier = null } = $props();
 
   /** @type {{ role: 'user' | 'assistant' | 'erreur', content: string }[]} */
   let messages = $state([]);
@@ -12,10 +12,11 @@
   const suggestions = ["C'est quoi, concrètement ?", "Il faut quel diplôme ?", "Je peux le faire sans le bac ?"];
 
   // Nouveau métier choisi : on repart d'une conversation vide
-  let dernierId = metier.id;
+  let dernierId = metier?.id ?? null;
   $effect(() => {
-    if (metier.id !== dernierId) {
-      dernierId = metier.id;
+    const id = metier?.id ?? null;
+    if (id !== dernierId) {
+      dernierId = id;
       messages = [];
     }
   });
@@ -35,9 +36,11 @@
         .filter((m) => m.role === "user" || m.role === "assistant")
         .map(({ role, content }) => ({ role, content }));
       const dernier = historique[historique.length - 1];
-      dernier.content = `À propos du métier « ${metier.intitule} » : ${dernier.content}`.slice(0, 1000);
+      if (metier) {
+        dernier.content = `À propos du métier « ${metier.intitule} » : ${dernier.content}`.slice(0, 1000);
+      }
 
-      const res = await fetch("/api/test-ollama", {
+      const res = await fetch("/api/ollama", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ messages: historique }),
@@ -82,7 +85,7 @@
     {/if}
   </div>
 
-  {#if messages.length === 0}
+  {#if metier && messages.length === 0}
     <div class="flex flex-wrap gap-2">
       {#each suggestions as s (s)}
         <button
@@ -104,7 +107,7 @@
       maxlength="400"
       autocomplete="off"
       disabled={chargement}
-      placeholder="Pose ta question sur ce métier"
+      placeholder={metier ? "Pose ta question sur ce métier" : "Pose ta question sur un métier ou une formation"}
       class="h-10 flex-1 rounded-2xl border border-neutral-900 px-4"
     />
     <button

@@ -116,13 +116,19 @@
 <section class="flex flex-col gap-2 mx-8 mb-8">
   <p class="font-semibold text-lg">Pose ta question</p>
   {#if !data.rapport}
-    <p>Importe ton rapport pour poser des questions sur tes métiers.</p>
+    <p>
+      Pose ta question librement, ou importe ton rapport ci-dessus pour des
+      réponses personnalisées.
+    </p>
   {:else if !metierActif}
-    <p>Choisis un métier ci-dessus.</p>
+    <p>
+      Choisis un métier ci-dessus pour des réponses ciblées, ou pose une
+      question libre (ton rapport est pris en compte).
+    </p>
   {:else}
     <p>Tu parles de : <strong>{metierActif.intitule}</strong></p>
-    <Chat metier={metierActif} />
   {/if}
+  <Chat metier={metierActif} />
 </section>
 
 <!-- <pre>{JSON.stringify(data, null, 4)}</pre> -->
