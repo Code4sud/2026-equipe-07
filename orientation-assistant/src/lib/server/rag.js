@@ -17,7 +17,10 @@ import { verifierReponse, MESSAGE_REPLI } from './citations.js'; // contrôle de
 /** @typedef {import('./pdf.js').Rapport} Rapport */
 /** @typedef {import('./pdf.js').Metier} Metier */
 /** @typedef {import('./citations.js').Source} Source */
-/** @typedef {import('./ollama.js').Message} Message */
+/**
+ * Un message envoyé au modèle (format Ollama /api/chat).
+ * @typedef {{ role: 'system' | 'user' | 'assistant', content: string }} Message
+ */
 
 // Questions proposées au jeune sous le chat (les 3 questions du sujet)
 export const SUGGESTIONS = ["C'est quoi, concrètement ?", 'Il faut quel diplôme ?', 'Je peux le faire sans le bac ?'];

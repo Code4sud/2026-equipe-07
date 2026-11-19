@@ -21,7 +21,8 @@
         {:else}
             <ul>
                 {#each zone.metiers as metier (metier.id)}
-                    <li>{metier.intitule}</li>
+                    <!-- Lien vers la fiche du métier + chat (route metier/[id], id = "z1-m3") -->
+                    <li><a href="/metier/{metier.id}">{metier.intitule}</a></li>
                 {/each}
             </ul>
         {/if}

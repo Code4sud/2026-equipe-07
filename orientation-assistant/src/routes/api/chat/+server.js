@@ -9,14 +9,16 @@
 import { json } from '@sveltejs/kit';
 import { lireSession, COOKIE_SID } from '#lib/server/session.js';
 import { validerId, validerQuestion } from '#lib/server/validation.js';
-import { ficheMetier } from '#lib/server/knowledge.js';
 import { repondre } from '#lib/server/rag.js';
+import { chat } from '#lib/server/ollama.js';
 
 const TAILLE_MAX_CORPS = 4 * 1024; // 4 Ko : largement assez pour une question de 500 caractères
 
 // Sessions dont une question est en cours de traitement
-const enCours = (globalThis.__chatEnCours ??= new Set());
+/** @type {Set<string>} */
+const enCours = (/** @type {any} */ (globalThis).__chatEnCours ??= new Set());
 
+/** @param {number} status @param {string} reponse */
 const erreur = (status, reponse) => json({ statut: 'erreur', reponse, sources: [], suggestions: [] }, { status });
 
 /** @type {import('./$types').RequestHandler} */
@@ -24,7 +26,7 @@ export async function POST({ request, cookies }) {
 
     const sid = cookies.get(COOKIE_SID);
     const rapport = lireSession(sid);
-    if (!rapport) return erreur(401, 'Ta session a expiré. Réimporte ton rapport.');
+    if (!rapport || !sid) return erreur(401, 'Ta session a expiré. Réimporte ton rapport.');
 
     // Corps de la requête : taille limitée, JSON obligatoire
     const texte = await request.text();
@@ -47,8 +49,12 @@ export async function POST({ request, cookies }) {
 
     enCours.add(sid);
     try {
-        const zone = rapport.zones.find((z) => z.numero === metier.zone);
-        const resultat = await repondre(metier, zone, ficheMetier(metier.intitule), question.question);
+        // rag.js construit les sources (rapport + ROME vérifié) et vérifie les [n] de la réponse.
+        // On lui donne la fonction qui appelle le modèle : chat() de ollama.js (2 min max sur CPU).
+        const resultat = await repondre(
+            { question: question.question, rapport, metierId: metier.id },
+            (messages) => chat(messages, { timeoutMs: 120_000, options: { temperature: 0.2 } })
+        );
         return json(resultat);
     } finally {
         enCours.delete(sid);
