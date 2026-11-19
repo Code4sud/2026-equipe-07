@@ -3,5 +3,8 @@
     let { data } = $props();
 </script>
 
-<h2>{data.rapport.nom}</h2>
-<p>{data.rapport.description}</p>
+<pre>
+    {#if data.rapport}
+        {JSON.stringify(data.rapport, null, 4)}
+    {/if}
+</pre>
