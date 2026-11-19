@@ -1,0 +1,4823 @@
+{
+  "accompagnateur voyage": {
+    "intitule": "Accompagnateur de voyages",
+    "code_rome": "G1201",
+    "libelle_rome": "Guide-accompagnateur / Guide-accompagnatrice",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.41",
+    "candidats": [
+      {
+        "code_rome": "G1201",
+        "libelle": "Accompagnateur / Accompagnatrice de voyages",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "F1114",
+        "libelle": "Accompagnateur / Accompagnatrice rénovation",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "G1211",
+        "libelle": "Accompagnateur / Accompagnatrice de la performance",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "acteur": {
+    "intitule": "Acteur",
+    "code_rome": "L1203",
+    "libelle_rome": "Comédien / Comédienne",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1203",
+        "libelle": "Acteur / Actrice",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "L1216",
+        "libelle": "Acteur / Actrice de complément",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "adjoint administratif territorial": {
+    "intitule": "Adjoint administratif territorial",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1602",
+        "libelle": "Adjoint administratif / Adjointe administrative (guichet)",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "E1106",
+        "libelle": "Journaliste territorial / Journaliste territoriale",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "J1202",
+        "libelle": "Pharmacien adjoint / Pharmacienne adjointe",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "agent accueil animation": {
+    "intitule": "Agent d'accueil et d'animation",
+    "code_rome": "G1205",
+    "libelle_rome": "Opérateur / Opératrice d'attraction",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1601",
+        "libelle": "Agent / Agente d'accueil",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1101",
+        "libelle": "Agent / Agente d'accueil touristique",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1248",
+        "libelle": "Agent / Agente d'accueil en cinéma",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "manuelle",
+    "statut": "verifie",
+    "nb_rapports": 8
+  },
+  "agent accueil billetterie": {
+    "intitule": "Agent d'accueil et billetterie",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1515",
+        "libelle": "Agent / Agente de billetterie",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "M1601",
+        "libelle": "Agent / Agente d'accueil",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1101",
+        "libelle": "Agent / Agente d'accueil touristique",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 5
+  },
+  "agent accueil": {
+    "intitule": "Agent d'accueil",
+    "code_rome": "M1601",
+    "libelle_rome": "Chargé / Chargée d'accueil",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1601",
+        "libelle": "Agent / Agente d'accueil",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1101",
+        "libelle": "Agent / Agente d'accueil touristique",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1248",
+        "libelle": "Agent / Agente d'accueil en cinéma",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "agent artiste sportif": {
+    "intitule": "Agent d'artistes et de sportifs",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1303",
+        "libelle": "Agent / Agente d'artiste",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1205",
+        "libelle": "Agent / Agente de reboisement",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1207",
+        "libelle": "Agent / Agente de plaine",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "agent blanchisserie": {
+    "intitule": "Agent de blanchisserie",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2201",
+        "libelle": "Agent / Agente de production en blanchisserie industrielle",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1205",
+        "libelle": "Agent / Agente de reboisement",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1207",
+        "libelle": "Agent / Agente de plaine",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "agent bord": {
+    "intitule": "Agent de bord",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N3116",
+        "libelle": "Agent / Agente des services généraux à bord",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "N4306",
+        "libelle": "Agent / Agente relation client à bord",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1205",
+        "libelle": "Agent / Agente de reboisement",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "agent entretien": {
+    "intitule": "Agent d'entretien",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1202",
+        "libelle": "Agent / Agente d'entretien de la nature",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "I1202",
+        "libelle": "Agent / Agente d'entretien de la voirie",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "I1203",
+        "libelle": "Agent / Agente d'entretien du bâtiment",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "agent funeraire": {
+    "intitule": "Agent funéraire",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2602",
+        "libelle": "Agent / Agente de chambre funéraire",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1205",
+        "libelle": "Agent / Agente de reboisement",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1207",
+        "libelle": "Agent / Agente de plaine",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 4
+  },
+  "agent manoeuvre ferroviaire": {
+    "intitule": "Agent de manœuvre ferroviaire",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2503",
+        "libelle": "agent / agente de sûreté ferroviaire",
+        "via": "ONISEP",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2511",
+        "libelle": "Agent / Agente de sûreté ferroviaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "N1101",
+        "libelle": "Agent / Agente cariste de livraison ferroviaire",
+        "via": "ROME",
+        "score": 0.57
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "agent service restauration": {
+    "intitule": "Agent de service en restauration",
+    "code_rome": "G1803",
+    "libelle_rome": "Serveur / Serveuse en restauration",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1603",
+        "libelle": "Agent / Agente de restauration rapide",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1607",
+        "libelle": "Agent / Agente de restauration collective",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "J1301",
+        "libelle": "Agent / Agente de restauration et d'hôtellerie",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "manuelle",
+    "statut": "verifie",
+    "nb_rapports": 9
+  },
+  "agent voyage": {
+    "intitule": "Agent de voyages",
+    "code_rome": "G1303",
+    "libelle_rome": "Conseiller / Conseillère en voyages",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1303",
+        "libelle": "Agent / Agente de voyages",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1306",
+        "libelle": "Agent / Agente de réservation voyages",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1205",
+        "libelle": "Agent / Agente de reboisement",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "aide cuisinier": {
+    "intitule": "Aide-cuisinier",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1609",
+        "libelle": "Cuisinier / Cuisinière",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1203",
+        "libelle": "Aide jardinier / Aide jardinière",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1402",
+        "libelle": "Aide horticole",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "aide medico psychologique": {
+    "intitule": "Aide médico-psychologique",
+    "code_rome": "K1306",
+    "libelle_rome": "Accompagnant Educatif et Social (AES) / Accompagnante Educative et Sociale (AES)",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1306",
+        "libelle": "Aide médico-psychologique",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K1407",
+        "libelle": "Responsable d'établissement médico-psychologique",
+        "via": "ROME",
+        "score": 0.57
+      },
+      {
+        "code_rome": "A1203",
+        "libelle": "Aide jardinier / Aide jardinière",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "aide soignant": {
+    "intitule": "Aide-soignant",
+    "code_rome": "J1501",
+    "libelle_rome": "Aide-soignant / Aide-soignante",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.561",
+    "candidats": [
+      {
+        "code_rome": "J1501",
+        "libelle": "Aide-soignant / Aide-soignante",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1203",
+        "libelle": "Aide jardinier / Aide jardinière",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1402",
+        "libelle": "Aide horticole",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "animateur radio": {
+    "intitule": "Animateur Radio",
+    "code_rome": "L1103",
+    "libelle_rome": "Animateur / Animatrice d'antenne",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1103",
+        "libelle": "Animateur / Animatrice radio",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1304",
+        "libelle": "Animateur / Animatrice agricole",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1321",
+        "libelle": "Animateur / Animatrice captage",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "animateur socioculturel": {
+    "intitule": "Animateur socioculturel",
+    "code_rome": "K1206",
+    "libelle_rome": "Animateur coordinateur socioculturel / Animatrice coordinatrice socioculturelle",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.65",
+    "candidats": [
+      {
+        "code_rome": "K1206",
+        "libelle": "animateur socioculturel / animatrice socioculturelle",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "A1304",
+        "libelle": "Animateur / Animatrice agricole",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1321",
+        "libelle": "Animateur / Animatrice captage",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "arbitre mediateur conciliateur": {
+    "intitule": "Arbitre, Médiateur et Conciliateur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1402",
+        "libelle": "Arbitre",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "L1401",
+        "libelle": "arbitre",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "G1238",
+        "libelle": "Médiateur / Médiatrice numérique",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "architecte interieur": {
+    "intitule": "Architecte d'intérieur",
+    "code_rome": "F1102",
+    "libelle_rome": "Architecte d'intérieur",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.258",
+    "candidats": [
+      {
+        "code_rome": "F1102",
+        "libelle": "Architecte d'intérieur",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "F1101",
+        "libelle": "architecte",
+        "via": "ONISEP",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1206",
+        "libelle": "Architecte paysagiste",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "architecte paysagiste": {
+    "intitule": "Architecte paysagiste",
+    "code_rome": "A1206",
+    "libelle_rome": "Concepteur / Conceptrice paysagiste",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1206",
+        "libelle": "Architecte paysagiste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1303",
+        "libelle": "paysagiste",
+        "via": "ONISEP",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1101",
+        "libelle": "architecte",
+        "via": "ONISEP",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "architecte": {
+    "intitule": "Architecte",
+    "code_rome": "F1101",
+    "libelle_rome": "Architecte du bâtiment",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.161",
+    "candidats": [
+      {
+        "code_rome": "F1101",
+        "libelle": "architecte",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "A1206",
+        "libelle": "Architecte paysagiste",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1102",
+        "libelle": "Architecte d'intérieur",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "art therapeute": {
+    "intitule": "Art-thérapeute",
+    "code_rome": "K1105",
+    "libelle_rome": "Art thérapeute",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.939",
+    "candidats": [
+      {
+        "code_rome": "K1105",
+        "libelle": "Art thérapeute",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K1104",
+        "libelle": "art-thérapeute",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "B1102",
+        "libelle": "Mosaïste d'art",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "assistant direction": {
+    "intitule": "Assistant de direction",
+    "code_rome": "M1604",
+    "libelle_rome": "Assistant / Assistante de direction",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.319",
+    "candidats": [
+      {
+        "code_rome": "M1604",
+        "libelle": "Assistant / Assistante de direction",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "D1401",
+        "libelle": "Assistant / Assistante de direction commerciale",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1401",
+        "libelle": "Assistant / Assistante à la direction d'un restaurant",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "assistant service social": {
+    "intitule": "Assistant de service social",
+    "code_rome": "K1201",
+    "libelle_rome": "Assistant social / Assistante sociale",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.64",
+    "candidats": [
+      {
+        "code_rome": "K1201",
+        "libelle": "Assistant / Assistante de service social",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "D1432",
+        "libelle": "Assistant / Assistante service clients",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K1230",
+        "libelle": "Coordonnateur / Coordonnatrice de service social",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "auxiliaire puericulture": {
+    "intitule": "Auxiliaire de puériculture",
+    "code_rome": "J1304",
+    "libelle_rome": "Auxiliaire de puériculture",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.415",
+    "candidats": [
+      {
+        "code_rome": "J1304",
+        "libelle": "Auxiliaire de puériculture",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1501",
+        "libelle": "Auxiliaire vétérinaire",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "D1203",
+        "libelle": "Auxiliaire en hydrothérapie",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 5
+  },
+  "auxiliaire vie": {
+    "intitule": "Auxiliaire de vie",
+    "code_rome": "K1311",
+    "libelle_rome": "Assistant / Assistante de vie aux familles",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1311",
+        "libelle": "Auxiliaire de vie",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K2113",
+        "libelle": "Auxiliaire de vie scolaire",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K1306",
+        "libelle": "Auxiliaire de Vie Sociale (AVS)",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "avocat": {
+    "intitule": "Avocat",
+    "code_rome": "K1915",
+    "libelle_rome": "Avocat / Avocate",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.33",
+    "candidats": [
+      {
+        "code_rome": "K1903",
+        "libelle": "avocat / avocate",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "K1915",
+        "libelle": "Avocat / Avocate",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K1904",
+        "libelle": "Avocat général / Avocate générale",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "bagagiste": {
+    "intitule": "Bagagiste",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1702",
+        "libelle": "Chasseur-bagagiste / Chasseuse-bagagiste",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "N1105",
+        "libelle": "Bagagiste manutentionnaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "N2203",
+        "libelle": "Bagagiste aéroportuaire",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "barbier": {
+    "intitule": "Barbier",
+    "code_rome": "D1216",
+    "libelle_rome": "Barbier / Barbière",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1216",
+        "libelle": "Barbier / Barbière",
+        "via": "ROME",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "barista": {
+    "intitule": "Barista",
+    "code_rome": "G1809",
+    "libelle_rome": "Barista",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1809",
+        "libelle": "Barista",
+        "via": "ROME",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 6
+  },
+  "boucher": {
+    "intitule": "Boucher",
+    "code_rome": "D1101",
+    "libelle_rome": "Boucher / Bouchère",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.268",
+    "candidats": [
+      {
+        "code_rome": "D1101",
+        "libelle": "Boucher / Bouchère",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "D1109",
+        "libelle": "Chef boucher / Cheffe bouchère",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H2101",
+        "libelle": "Boucher / Bouchère d'abattoir",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "bucheron abatteur": {
+    "intitule": "Bûcheron abatteur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1201",
+        "libelle": "Bûcheron / Bûcheronne",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1402",
+        "libelle": "Abatteur / Abatteuse de carrière",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "H2101",
+        "libelle": "Abatteur de bestiaux / Abatteuse de bestiaux",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 4
+  },
+  "cadreur": {
+    "intitule": "Cadreur",
+    "code_rome": "L1505",
+    "libelle_rome": "Opérateur / Opératrice de prise de vues",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.262",
+    "candidats": [
+      {
+        "code_rome": "L1505",
+        "libelle": "Cadreur / Cadreuse",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "H2201",
+        "libelle": "Monteur-cadreur / Monteuse-cadreuse d'ouvrages en bois",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "capitaine navire": {
+    "intitule": "Capitaine de navire",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1406",
+        "libelle": "Capitaine de pêche",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "F1504",
+        "libelle": "Charpentier de navire / Charpentière de navire",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K1704",
+        "libelle": "Capitaine de police",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "charpentier boi": {
+    "intitule": "Charpentier bois",
+    "code_rome": "F1503",
+    "libelle_rome": "Charpentier / Charpentière",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.9",
+    "candidats": [
+      {
+        "code_rome": "F1503",
+        "libelle": "charpentier / charpentière bois",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "F1504",
+        "libelle": "Charpentier / Charpentière bois en construction navale",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "B1302",
+        "libelle": "Laqueur / Laqueuse sur bois",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "chef cuisine": {
+    "intitule": "Chef de cuisine",
+    "code_rome": "G1601",
+    "libelle_rome": "Chef / Cheffe de cuisine",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.420",
+    "candidats": [
+      {
+        "code_rome": "G1601",
+        "libelle": "Chef / Cheffe de cuisine",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1609",
+        "libelle": "Chef / Cheffe de cuisine à domicile",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1421",
+        "libelle": "Chef palefrenier / Cheffe palefrenière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "chef equipe administratif": {
+    "intitule": "Chef d'équipe administratif",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1211",
+        "libelle": "Chef / Cheffe d'équipe paysagiste",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1203",
+        "libelle": "Chef / Cheffe d'équipe de mines",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1206",
+        "libelle": "Chef / Cheffe d'équipe bâtiment",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "chef equipe police": {
+    "intitule": "Chef d'équipe de police",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1211",
+        "libelle": "Chef / Cheffe d'équipe paysagiste",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1203",
+        "libelle": "Chef / Cheffe d'équipe de mines",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1206",
+        "libelle": "Chef / Cheffe d'équipe bâtiment",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "chef equipe surveillant penitentiaire": {
+    "intitule": "Chef d'équipe de surveillants pénitentiaires",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1711",
+        "libelle": "Surveillant pénitentiaire / Surveillante pénitentiaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1211",
+        "libelle": "Chef / Cheffe d'équipe paysagiste",
+        "via": "ROME",
+        "score": 0.57
+      },
+      {
+        "code_rome": "F1203",
+        "libelle": "Chef / Cheffe d'équipe en carrière",
+        "via": "ROME",
+        "score": 0.57
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 4
+  },
+  "chef etablissement scolaire": {
+    "intitule": "Chef d'établissement scolaire",
+    "code_rome": "K2103",
+    "libelle_rome": "Chef / Cheffe d'établissement d'enseignement",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.7832",
+    "candidats": [
+      {
+        "code_rome": "K2103",
+        "libelle": "chef / cheffe d'établissement scolaire",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "K1420",
+        "libelle": "Chef / Cheffe d'établissement pénitentiaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2513",
+        "libelle": "Gardien / Gardienne d'établissement scolaire",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "chirurgien dentiste": {
+    "intitule": "Chirurgien-dentiste",
+    "code_rome": "J1103",
+    "libelle_rome": "Dentiste",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.870",
+    "candidats": [
+      {
+        "code_rome": "J1103",
+        "libelle": "Chirurgien-dentiste / Chirurgienne-dentiste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K1402",
+        "libelle": "Chirurgien-dentiste / Chirurgienne-dentiste conseil",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "J1119",
+        "libelle": "Chirurgien / Chirurgienne",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "coach sportif": {
+    "intitule": "Coach sportif",
+    "code_rome": "G1217",
+    "libelle_rome": "Moniteur / Monitrice en salle de sport",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1217",
+        "libelle": "Coach sportif",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1233",
+        "libelle": "Coach mental sportif",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1208",
+        "libelle": "Coach d'équipe de sportifs professionnels",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 10
+  },
+  "coiffeur": {
+    "intitule": "Coiffeur",
+    "code_rome": "D1202",
+    "libelle_rome": "Coiffeur / Coiffeuse",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.39",
+    "candidats": [
+      {
+        "code_rome": "D1202",
+        "libelle": "Coiffeur / Coiffeuse",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "D1216",
+        "libelle": "Coiffeur barbier / Coiffeuse barbière",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "D1217",
+        "libelle": "Socio-coiffeur / Socio-coiffeuse",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "commissaire justice": {
+    "intitule": "Commissaire de justice",
+    "code_rome": "K1901",
+    "libelle_rome": "Notaire",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.872",
+    "candidats": [
+      {
+        "code_rome": "K1901",
+        "libelle": "commissaire de justice",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "K1924",
+        "libelle": "Clerc de commissaire de justice",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K1902",
+        "libelle": "collaborateur / collaboratrice de commissaire de justice",
+        "via": "ONISEP",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "concierge": {
+    "intitule": "Concierge",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1701",
+        "libelle": "Concierge d'hôtel",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2501",
+        "libelle": "Concierge d'immeuble",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1705",
+        "libelle": "Chef / Cheffe concierge d'hôtel",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 4
+  },
+  "conducteur ambulance": {
+    "intitule": "Conducteur d'ambulance",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1101",
+        "libelle": "Conducteur / Conductrice de tracteur",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1102",
+        "libelle": "Conducteur / Conductrice d'abatteuses",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "E1301",
+        "libelle": "Conducteur / Conductrice de rotatives",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "conducteur appareil levage palan treuil": {
+    "intitule": "Conducteur d'appareils de levage (palan, treuil)",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1302",
+        "libelle": "Conducteur / Conductrice d'engins de levage",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "H2102",
+        "libelle": "Conducteur / Conductrice d'appareils en industrie alimentaire",
+        "via": "ROME",
+        "score": 0.44
+      },
+      {
+        "code_rome": "H2301",
+        "libelle": "Conducteur / Conductrice d'appareils des industries chimiques",
+        "via": "ROME",
+        "score": 0.44
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conducteur bus car": {
+    "intitule": "Conducteur de bus / car",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N4103",
+        "libelle": "Conducteur / Conductrice de bus",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "N4109",
+        "libelle": "Conducteur / Conductrice de car",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "N4127",
+        "libelle": "Conducteur / Conductrice de car tourisme",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "conducteur drague": {
+    "intitule": "Conducteur de drague",
+    "code_rome": "F1302",
+    "libelle_rome": "Conducteur / Conductrice d'engins de chantier",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1302",
+        "libelle": "Conducteur / Conductrice de drague",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1101",
+        "libelle": "Conducteur / Conductrice de tracteur",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1102",
+        "libelle": "Conducteur / Conductrice d'abatteuses",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "conducteur engin exploitation miniere carriere": {
+    "intitule": "Conducteur d'engins d'exploitation minière ou de carrière",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1101",
+        "libelle": "Conducteur / Conductrice d'engins d'exploitation agricole",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1102",
+        "libelle": "Conducteur / Conductrice d'engins d'exploitation forestière",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1203",
+        "libelle": "Chef / Cheffe d'exploitation de carrière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conducteur engin forestier": {
+    "intitule": "Conducteur d'engins forestiers",
+    "code_rome": "A1102",
+    "libelle_rome": "Conducteur / Conductrice d'engins d'exploitation forestière",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1102",
+        "libelle": "Conducteur / Conductrice d'engins forestiers",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1101",
+        "libelle": "Conducteur / Conductrice d'engins agricoles",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1213",
+        "libelle": "Conducteur / Conductrice de travaux forestiers",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "conducteur manoeuvre ferroviaire": {
+    "intitule": "Conducteur de manœuvre ferroviaire",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N4301",
+        "libelle": "Conducteur / Conductrice de manœuvre",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "F1302",
+        "libelle": "Conducteur / Conductrice d'engins de manœuvre",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "N4303",
+        "libelle": "Conducteur / Conductrice d'engins de manœuvre du réseau ferré",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conseiller clientele": {
+    "intitule": "Conseiller clientèle",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "C1102",
+        "libelle": "Conseiller / Conseillère clientèle en assurances",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "C1206",
+        "libelle": "Conseiller / Conseillère de clientèle bancaire",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "D1408",
+        "libelle": "Conseiller / Conseillère clientèle à distance",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conseiller conjugal familial": {
+    "intitule": "Conseiller Conjugal et Familial",
+    "code_rome": "K1101",
+    "libelle_rome": "Conseiller conjugal et familial / Conseillère conjugale et familiale",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1101",
+        "libelle": "Conseiller conjugal et familial / Conseillère conjugale et familiale",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1304",
+        "libelle": "Conseiller / Conseillère agricole",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1311",
+        "libelle": "Conseiller forestier / Conseillère forestière",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "conseiller credit": {
+    "intitule": "Conseiller en crédit",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "C1217",
+        "libelle": "Conseiller / Conseillère en crédit immobilier",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1304",
+        "libelle": "Conseiller / Conseillère agricole",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1311",
+        "libelle": "Conseiller forestier / Conseillère forestière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conseiller financier": {
+    "intitule": "Conseiller financier",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "C1205",
+        "libelle": "Conseiller / Conseillère en investissements financiers",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "C1206",
+        "libelle": "Conseiller financier / Conseillère financière banque postale",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "C1217",
+        "libelle": "Conseiller financier / Conseillère financière clientèle professionnelle",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conseiller gestion patrimoine": {
+    "intitule": "Conseiller en gestion de patrimoine",
+    "code_rome": "C1205",
+    "libelle_rome": "Conseiller / Conseillère en gestion de patrimoine",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "C1205",
+        "libelle": "Conseiller / Conseillère en gestion de patrimoine",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "M1209",
+        "libelle": "Conseiller / Conseillère en gestion",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1304",
+        "libelle": "Conseiller / Conseillère de gestion agricole",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "conseiller pedagogique": {
+    "intitule": "Conseiller pédagogique",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1304",
+        "libelle": "Conseiller / Conseillère agricole",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1311",
+        "libelle": "Conseiller forestier / Conseillère forestière",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1314",
+        "libelle": "Conseiller / Conseillère halieutique",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "conseiller penitentiaire insertion probation": {
+    "intitule": "Conseiller pénitentiaire d'insertion et de probation",
+    "code_rome": "K1207",
+    "libelle_rome": "Educateur spécialisé / Educatrice spécialisée",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.712",
+    "candidats": [
+      {
+        "code_rome": "K1207",
+        "libelle": "conseiller / conseillère pénitentiaire d'insertion et de probation",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "K1211",
+        "libelle": "Conseiller / Conseillère d'Insertion et de Probation (CIP)",
+        "via": "ROME",
+        "score": 0.75
+      },
+      {
+        "code_rome": "K1416",
+        "libelle": "Directeur / Directrice des services pénitentiaires d'insertion et de probation (DSPIP)",
+        "via": "ROME",
+        "score": 0.6
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "conseiller prevention addiction": {
+    "intitule": "Conseiller en prévention des addictions",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "H1303",
+        "libelle": "Conseiller de prévention en risques industriels / Conseillère de prévention en risques industriels",
+        "via": "ROME",
+        "score": 0.57
+      },
+      {
+        "code_rome": "A1304",
+        "libelle": "Conseiller / Conseillère agricole",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1311",
+        "libelle": "Conseiller forestier / Conseillère forestière",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 5
+  },
+  "coordinateur programme fitnes bien etre": {
+    "intitule": "Coordinateur des programmes de fitness et de bien-être",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1222",
+        "libelle": "Masseur / Masseuse bien-être",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K1108",
+        "libelle": "Energéticien bien-être / Energéticienne bien-être",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "D1231",
+        "libelle": "Responsable espace bien-être",
+        "via": "ROME",
+        "score": 0.44
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 5
+  },
+  "coordinateur recherche clinique": {
+    "intitule": "Coordinateur de recherche clinique",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "H1206",
+        "libelle": "attaché / attachée de recherche clinique",
+        "via": "ONISEP",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H1211",
+        "libelle": "Chargé / Chargée de recherche clinique",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H1213",
+        "libelle": "Directeur / Directrice de la recherche clinique",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "coursier": {
+    "intitule": "Coursier",
+    "code_rome": "N4104",
+    "libelle_rome": "Coursier / Coursière",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N4104",
+        "libelle": "Coursier / Coursière",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1702",
+        "libelle": "Coursier / Coursière en hôtellerie",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "N1203",
+        "libelle": "Commis coursier / Commise coursière en douane",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "cuisinier collectivite": {
+    "intitule": "Cuisinier en collectivité",
+    "code_rome": "G1606",
+    "libelle_rome": "Cuisinier / Cuisinière de collectivité",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1606",
+        "libelle": "Cuisinier / Cuisinière de collectivité",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1609",
+        "libelle": "Cuisinier / Cuisinière",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1601",
+        "libelle": "Chef cuisinier / Cheffe cuisinière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "cuisinier restauration rapide": {
+    "intitule": "Cuisinier en restauration rapide",
+    "code_rome": "G1603",
+    "libelle_rome": "Equipier polyvalent / Equipière polyvalente de restauration rapide",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1409",
+        "libelle": "Manager en restauration rapide",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1603",
+        "libelle": "Agent / Agente de restauration rapide",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1402",
+        "libelle": "manager opérationnel / manageuse opérationnelle en restauration rapide",
+        "via": "ONISEP",
+        "score": 0.57
+      }
+    ],
+    "methode": "manuelle",
+    "statut": "verifie",
+    "nb_rapports": 6
+  },
+  "demonstrateur produit": {
+    "intitule": "Démonstrateur de produits",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1501",
+        "libelle": "Démonstrateur / Démonstratrice",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "B1301",
+        "libelle": "Scénographe produits",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "B1304",
+        "libelle": "Artisan démonstrateur / Artisane démonstratrice",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "dessinateur projeteur batiment genie civil": {
+    "intitule": "Dessinateur projeteur en bâtiment et génie civil",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1104",
+        "libelle": "Dessinateur / Dessinatrice en génie civil",
+        "via": "ROME",
+        "score": 0.75
+      },
+      {
+        "code_rome": "F1110",
+        "libelle": "Dessinateur-projeteur / Dessinatrice-projeteuse enveloppe du bâtiment",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1111",
+        "libelle": "Ingénieur / Ingénieure génie civil bâtiment industriel",
+        "via": "ROME",
+        "score": 0.6
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "dessinateur projeteur electronique": {
+    "intitule": "Dessinateur-projeteur électronique",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "H1236",
+        "libelle": "Dessinateur-projeteur / Dessinatrice-projeteuse en électricité-électronique",
+        "via": "ROME",
+        "score": 0.86
+      },
+      {
+        "code_rome": "F1104",
+        "libelle": "dessinateur-projeteur / dessinatrice-projeteuse",
+        "via": "ONISEP",
+        "score": 0.8
+      },
+      {
+        "code_rome": "H1202",
+        "libelle": "Dessinateur / Dessinatrice en électricité-électronique",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "dessinateur projeteur mecanique": {
+    "intitule": "Dessinateur-projeteur mécanique",
+    "code_rome": "H1203",
+    "libelle_rome": "Dessinateur-projeteur / Dessinatrice-projeteuse en mécanique",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "H1203",
+        "libelle": "Dessinateur-projeteur / Dessinatrice-projeteuse en mécanique",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "F1104",
+        "libelle": "dessinateur-projeteur / dessinatrice-projeteuse",
+        "via": "ONISEP",
+        "score": 0.8
+      },
+      {
+        "code_rome": "H1236",
+        "libelle": "Dessinateur-projeteur / Dessinatrice-projeteuse en électrotechnique",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "directeur etablissement enseignement superieur": {
+    "intitule": "Directeur d'établissement d'enseignement supérieur",
+    "code_rome": "K2120",
+    "libelle_rome": "Directeur / Directrice d'établissement d'enseignement supérieur",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2120",
+        "libelle": "Directeur / Directrice d'établissement d'enseignement supérieur",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K2103",
+        "libelle": "Directeur / Directrice d'établissement d'enseignement privé",
+        "via": "ROME",
+        "score": 0.75
+      },
+      {
+        "code_rome": "M1216",
+        "libelle": "Secrétaire général / Secrétaire générale d'établissement public d'enseignement supérieur",
+        "via": "ROME",
+        "score": 0.6
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "directeur general": {
+    "intitule": "Directeur général",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1405",
+        "libelle": "Directeur général / Directrice générale de club sportif",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K1422",
+        "libelle": "Directeur général / Directrice générale d'établissement public",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "M1301",
+        "libelle": "Directeur général / Directrice générale de grande entreprise",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "directeur pompe funebre": {
+    "intitule": "Directeur de pompes funèbres",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2606",
+        "libelle": "Directeur / Directrice de régie de pompes funèbres",
+        "via": "ROME",
+        "score": 0.86
+      },
+      {
+        "code_rome": "A1312",
+        "libelle": "Directeur / Directrice environnement",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1433",
+        "libelle": "Directeur / Directrice des cultures",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 5
+  },
+  "directeur spa": {
+    "intitule": "Directeur de spa",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1312",
+        "libelle": "Directeur / Directrice environnement",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1433",
+        "libelle": "Directeur / Directrice des cultures",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "B1814",
+        "libelle": "Directeur / Directrice de collection",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "directeur structure accueil petite enfance": {
+    "intitule": "Directeur de structure d'accueil de la petite enfance",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1507",
+        "libelle": "Puériculteur / Puéricultrice en structure d'accueil petite enfance",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K1216",
+        "libelle": "Responsable de structure multi accueil petite enfance",
+        "via": "ROME",
+        "score": 0.73
+      },
+      {
+        "code_rome": "K1307",
+        "libelle": "Assistant / Assistante accueil petite enfance",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "educateur animau": {
+    "intitule": "Éducateur d'animaux",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1408",
+        "libelle": "Eleveur / Eleveuse d'animaux",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1426",
+        "libelle": "Educateur canin / Educatrice canine",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1501",
+        "libelle": "soigneur / soigneuse d'animaux",
+        "via": "ONISEP",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "employe restauration rapide": {
+    "intitule": "Employé de restauration rapide",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1603",
+        "libelle": "employé polyvalent / employée polyvalente en restauration rapide",
+        "via": "ONISEP",
+        "score": 0.86
+      },
+      {
+        "code_rome": "G1409",
+        "libelle": "Manager en restauration rapide",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1607",
+        "libelle": "Employé / Employée de restauration collective",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 4
+  },
+  "enqueteur": {
+    "intitule": "Enquêteur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1706",
+        "libelle": "Enquêteur de gendarmerie / Enquêtrice de gendarmerie",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K1708",
+        "libelle": "Enquêteur / Enquêtrice de police",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2505",
+        "libelle": "Enquêteur privé / Enquêtrice privée",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "enseignant art theatre musique enseignement superieur": {
+    "intitule": "Enseignant en arts, théâtre et musique dans l'enseignement supérieur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "E1106",
+        "libelle": "Critique d'art, cinéma, théâtre, littérature, musique",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K2105",
+        "libelle": "enseignant / enseignante d'art",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K2108",
+        "libelle": "Professeur / Professeure de l'enseignement supérieur",
+        "via": "ROME",
+        "score": 0.44
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "enseignant chercheur economie": {
+    "intitule": "Enseignant-chercheur en économie",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2108",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K2401",
+        "libelle": "Chercheur / Chercheuse en économie",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K2125",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en archéologie",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "enseignant chercheur ingenierie": {
+    "intitule": "Enseignant-chercheur en ingénierie",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2108",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K2125",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en archéologie",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2143",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en anthropologie",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "enseignant chercheur philosophie science religion": {
+    "intitule": "Enseignant-chercheur en philosophie et en sciences des religions",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2108",
+        "libelle": "enseignant-chercheur / enseignante-chercheuse",
+        "via": "ONISEP",
+        "score": 0.57
+      },
+      {
+        "code_rome": "K2125",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en archéologie",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K2143",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en anthropologie",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "enseignant chercheur science terre atmosphere ocean espace": {
+    "intitule": "Enseignant-Chercheur en Sciences de la Terre, de l'Atmosphère, des Océans et de l'Espace",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2108",
+        "libelle": "enseignant-chercheur / enseignante-chercheuse",
+        "via": "ONISEP",
+        "score": 0.44
+      },
+      {
+        "code_rome": "K2125",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en archéologie",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "K2143",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en anthropologie",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "enseignant chercheur stap": {
+    "intitule": "Enseignant-chercheur en STAPS",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2108",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K2125",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en archéologie",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2143",
+        "libelle": "Enseignant-chercheur / Enseignante-chercheuse en anthropologie",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "enseignant specialise college uli segpa": {
+    "intitule": "Enseignant spécialisé (collège - ULIS/SEGPA)",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2109",
+        "libelle": "enseignant spécialisé / enseignante spécialisée",
+        "via": "ONISEP",
+        "score": 0.57
+      },
+      {
+        "code_rome": "E1106",
+        "libelle": "Journaliste spécialisé / Journaliste spécialisée",
+        "via": "ROME",
+        "score": 0.29
+      },
+      {
+        "code_rome": "E1312",
+        "libelle": "Correcteur spécialisé / Correctrice spécialisée",
+        "via": "ROME",
+        "score": 0.29
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "entraineur sportif": {
+    "intitule": "Entraîneur sportif",
+    "code_rome": "G1204",
+    "libelle_rome": "Educateur sportif / Educatrice sportive",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.481",
+    "candidats": [
+      {
+        "code_rome": "G1204",
+        "libelle": "Entraîneur sportif / Entraîneure sportive",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1208",
+        "libelle": "Entraîneur sportif / Entraîneure sportive de football",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "E1106",
+        "libelle": "Journaliste sportif / Journaliste sportive",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "ergotherapeute": {
+    "intitule": "Ergothérapeute",
+    "code_rome": "J1403",
+    "libelle_rome": "Ergothérapeute",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.280",
+    "candidats": [
+      {
+        "code_rome": "J1403",
+        "libelle": "Ergothérapeute",
+        "via": "ROME",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "estheticien": {
+    "intitule": "Esthéticien",
+    "code_rome": "D1208",
+    "libelle_rome": "Esthéticien / Esthéticienne",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1208",
+        "libelle": "Esthéticien / Esthéticienne",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "D1237",
+        "libelle": "Socio-esthéticien / Socio-esthéticienne",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "exploitant agricole": {
+    "intitule": "Exploitant agricole",
+    "code_rome": "A1416",
+    "libelle_rome": "Exploitant / Exploitante agricole",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1416",
+        "libelle": "Exploitant / Exploitante agricole",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1407",
+        "libelle": "Exploitant éleveur / Exploitante éleveuse agricole bovins",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1409",
+        "libelle": "Exploitant éleveur / Exploitante éleveuse agricole de volailles",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "forestier": {
+    "intitule": "Forestier",
+    "code_rome": "A1205",
+    "libelle_rome": "Sylviculteur / Sylvicultrice",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1205",
+        "libelle": "Forestier / Forestière",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1102",
+        "libelle": "Débardeur forestier / Débardeuse forestière",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1204",
+        "libelle": "Garde Forestier / Forestière",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "garde chasse agent office francai biodiversite ofb": {
+    "intitule": "Garde-chasse / Agent de l'Office Français de la Biodiversité (OFB)",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1204",
+        "libelle": "Garde-chasse",
+        "via": "ROME",
+        "score": 0.44
+      },
+      {
+        "code_rome": "C1302",
+        "libelle": "Agent / Agente de back-office",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1202",
+        "libelle": "Agent / Agente d'entretien nature et biodiversité",
+        "via": "ROME",
+        "score": 0.36
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "garde enfant domicile": {
+    "intitule": "Garde d'enfants à domicile",
+    "code_rome": "K1303",
+    "libelle_rome": "Garde d'enfant",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1303",
+        "libelle": "Garde d'enfant à domicile",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1204",
+        "libelle": "Garde nature",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1217",
+        "libelle": "Responsable de gardes",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 6
+  },
+  "gerant fond investissement": {
+    "intitule": "Gérant de fonds d'investissement",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "C1304",
+        "libelle": "Gérant / Gérante de Société d'Investissement à Capital Variable (SICAV)",
+        "via": "ROME",
+        "score": 0.44
+      },
+      {
+        "code_rome": "C1303",
+        "libelle": "Gérant / Gérante obligataire",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "C1501",
+        "libelle": "Gérant / Gérante de copropriété",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "graphiste": {
+    "intitule": "Graphiste",
+    "code_rome": "E1205",
+    "libelle_rome": "Designer graphique",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "E1205",
+        "libelle": "Graphiste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "B1805",
+        "libelle": "Styliste graphiste",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "E1211",
+        "libelle": "Dessinateur / Dessinatrice graphiste",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "guide naturaliste mediateur environnement": {
+    "intitule": "Guide naturaliste / Médiateur environnement",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1231",
+        "libelle": "Guide naturaliste",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1242",
+        "libelle": "Médiateur / Médiatrice environnement",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1312",
+        "libelle": "Directeur / Directrice environnement",
+        "via": "ROME",
+        "score": 0.33
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 5
+  },
+  "guide touristique": {
+    "intitule": "Guide touristique",
+    "code_rome": "G1201",
+    "libelle_rome": "Guide-accompagnateur / Guide-accompagnatrice",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1201",
+        "libelle": "Guide touristique",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1216",
+        "libelle": "Guide sportif / Guide sportive",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "G1222",
+        "libelle": "Guide-conférencier / Guide-conférencière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 8
+  },
+  "gynecologue obstetricien": {
+    "intitule": "Gynécologue-obstétricien",
+    "code_rome": "J1111",
+    "libelle_rome": "Gynécologue",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.845",
+    "candidats": [
+      {
+        "code_rome": "J1111",
+        "libelle": "Gynécologue-obstétricien / Gynécologue-obstétricienne",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "J1102",
+        "libelle": "gynécologue-obstétricien / obstétricienne",
+        "via": "ONISEP",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "hote accueil restauration": {
+    "intitule": "Hôte d'accueil en restauration",
+    "code_rome": "G1803",
+    "libelle_rome": "Serveur / Serveuse en restauration",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1601",
+        "libelle": "Hôte / Hôtesse d'accueil",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1101",
+        "libelle": "Hôte / Hôtesse d'accueil tourisme",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1703",
+        "libelle": "Hôte / Hôtesse d'accueil de l'hôtellerie",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "manuelle",
+    "statut": "verifie",
+    "nb_rapports": 6
+  },
+  "hotesse air steward": {
+    "intitule": "Hôtesse de l'air / Steward",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N2101",
+        "libelle": "Steward / Hôtesse de l'air",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1611",
+        "libelle": "Steward / Hôtesse de train",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "N2201",
+        "libelle": "Steward / Hôtesse au sol",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "iade infirmier anesthesiste diplome etat": {
+    "intitule": "IADE (Infirmier Anesthésiste Diplômé d'État)",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1503",
+        "libelle": "Infirmier Anesthésiste Diplômé / Infirmière Anesthésiste Diplômée d'Etat (IADE)",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "F1101",
+        "libelle": "Architecte diplômé d'état (DE)",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "J1504",
+        "libelle": "Infirmier / Infirmière de bloc opératoire Diplômé(e) d'Etat (IBODE)",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "infirmier": {
+    "intitule": "Infirmier",
+    "code_rome": "J1506",
+    "libelle_rome": "Infirmier / Infirmière en soins généraux (IDE)",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.38",
+    "candidats": [
+      {
+        "code_rome": "J1506",
+        "libelle": "infirmier / infirmière",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "J1502",
+        "libelle": "Infirmier général / Infirmière générale",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "J1505",
+        "libelle": "Infirmier / Infirmière de prévention",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "inspecteur transport": {
+    "intitule": "Inspecteur des Transports",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1502",
+        "libelle": "Inspecteur / Inspectrice du travail des transports",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "C1121",
+        "libelle": "Inspecteur / Inspectrice des assurances",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "C1126",
+        "libelle": "Inspecteur / Inspectrice URSSAF",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "interprete traducteur": {
+    "intitule": "Interprète - Traducteur",
+    "code_rome": "E1123",
+    "libelle_rome": "Interprète",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "E1108",
+        "libelle": "Traducteur-interprète / Traductrice-interprète",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "E1123",
+        "libelle": "Interprète-traducteur / Interprète-traductrice",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "E1122",
+        "libelle": "Adaptateur-traducteur / Adaptatrice-traductrice",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "jardinier paysagiste": {
+    "intitule": "Jardinier paysagiste",
+    "code_rome": "A1208",
+    "libelle_rome": "Jardinier / Jardinière paysagiste",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1208",
+        "libelle": "Jardinier / Jardinière paysagiste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1220",
+        "libelle": "Jardinier / Jardinière paysagiste en terrain de sport",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1303",
+        "libelle": "paysagiste",
+        "via": "ONISEP",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "juge administratif": {
+    "intitule": "Juge administratif",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1904",
+        "libelle": "Juge",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K1229",
+        "libelle": "Médiateur administratif / Médiatrice administrative",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "L1402",
+        "libelle": "Juge sportif / Juge sportive",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "manoeuvre petrolier": {
+    "intitule": "Manœuvre pétrolier",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1210",
+        "libelle": "Manœuvre forestier / Manœuvre forestière",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "F1105",
+        "libelle": "Géologue pétrolier / Géologue pétrolière",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "F1212",
+        "libelle": "Ingénieur pétrolier / Ingénieure pétrolière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "masseur kinesitherapeute": {
+    "intitule": "Masseur-kinésithérapeute",
+    "code_rome": "J1404",
+    "libelle_rome": "Kinésithérapeute",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.29",
+    "candidats": [
+      {
+        "code_rome": "J1404",
+        "libelle": "Masseur / Masseuse kinésithérapeute",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "D1222",
+        "libelle": "Masseur / Masseuse bien-être",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "mecanicien reparateur automobile": {
+    "intitule": "Mécanicien-réparateur automobile",
+    "code_rome": "I1604",
+    "libelle_rome": "Mécanicien / Mécanicienne automobile",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "I1604",
+        "libelle": "Mécanicien-réparateur / Mécanicienne-réparatrice automobile",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "I1103",
+        "libelle": "Chef mécanicien / Cheffe mécanicienne automobile",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "I1606",
+        "libelle": "Réparateur / Réparatrice de carrosserie automobile",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "medecin anesthesiste reanimateur": {
+    "intitule": "Médecin Anesthésiste-Réanimateur",
+    "code_rome": "J1124",
+    "libelle_rome": "Médecin Anesthésiste Réanimateur / Réanimatrice (MAR)",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1124",
+        "libelle": "Médecin Anesthésiste Réanimateur / Réanimatrice (MAR)",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "J1102",
+        "libelle": "anesthésiste-réanimateur / anesthésiste-réanimatrice",
+        "via": "ONISEP",
+        "score": 0.8
+      },
+      {
+        "code_rome": "J1101",
+        "libelle": "Médecin de prévention",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "medecin generaliste": {
+    "intitule": "Médecin généraliste",
+    "code_rome": "J1102",
+    "libelle_rome": "Médecin généraliste",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.869",
+    "candidats": [
+      {
+        "code_rome": "J1102",
+        "libelle": "Médecin généraliste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "E1201",
+        "libelle": "Photographe généraliste",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "J1101",
+        "libelle": "Médecin de prévention",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "medecin sport": {
+    "intitule": "Médecin du sport",
+    "code_rome": "J1126",
+    "libelle_rome": "Médecin du sport",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.637",
+    "candidats": [
+      {
+        "code_rome": "J1102",
+        "libelle": "médecin du sport",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "J1126",
+        "libelle": "Médecin du sport",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "E1201",
+        "libelle": "Photographe de sport",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "monteur pneu": {
+    "intitule": "Monteur de pneus",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "B1601",
+        "libelle": "Monteur / Monteuse en bronze",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "B1614",
+        "libelle": "Monteur / Monteuse en orfèvrerie",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "B1616",
+        "libelle": "Monteur en horlogerie / Monteuse en horlogerie",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "musicotherapeute": {
+    "intitule": "Musicothérapeute",
+    "code_rome": "K1105",
+    "libelle_rome": "Art thérapeute",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1105",
+        "libelle": "Musicothérapeute",
+        "via": "ROME",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "operateur station epuration": {
+    "intitule": "Opérateur de station d'épuration",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1511",
+        "libelle": "Opérateur / Opératrice de station service",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2316",
+        "libelle": "Responsable de station d'épuration",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2322",
+        "libelle": "Technicien / Technicienne de station d'épuration",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "operateur telephonique": {
+    "intitule": "Opérateur téléphonique",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1101",
+        "libelle": "Opérateur / Opératrice d'épandage",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1102",
+        "libelle": "Opérateur / Opératrice d'abatteuse",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "B1603",
+        "libelle": "Opérateur / Opératrice en bijouterie",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "organisateur evenement": {
+    "intitule": "Organisateur d'événements",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "E1107",
+        "libelle": "Responsable évènement",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "E1117",
+        "libelle": "Organisateur / Organisatrice de réceptions",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "G1308",
+        "libelle": "Organisateur / Organisatrice de voyages",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "orthodontiste": {
+    "intitule": "Orthodontiste",
+    "code_rome": "J1141",
+    "libelle_rome": "Orthodontiste",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.962",
+    "candidats": [
+      {
+        "code_rome": "J1141",
+        "libelle": "Orthodontiste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "J1103",
+        "libelle": "orthodontiste",
+        "via": "ONISEP",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "ouvrier agricole": {
+    "intitule": "Ouvrier agricole",
+    "code_rome": "A1419",
+    "libelle_rome": "Ouvrier agricole polyvalent / Ouvrière agricole polyvalente",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.903",
+    "candidats": [
+      {
+        "code_rome": "A1416",
+        "libelle": "ouvrier / ouvrière agricole",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "A1419",
+        "libelle": "Ouvrier / Ouvrière agricole",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1418",
+        "libelle": "Ouvrier / Ouvrière agricole viticulture",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 5
+  },
+  "ouvrier carriere": {
+    "intitule": "Ouvrier de carrière",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1203",
+        "libelle": "ouvrier / ouvrière paysagiste",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1208",
+        "libelle": "Ouvrier / Ouvrière du paysage",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1210",
+        "libelle": "Ouvrier forestier / Ouvrière forestière",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "ouvrier elevage": {
+    "intitule": "Ouvrier d'élevage",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1419",
+        "libelle": "Ouvrier / Ouvrière en polyculture élevage",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1403",
+        "libelle": "Ouvrier / Ouvrière d'élevage en production bovine",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1409",
+        "libelle": "Ouvrier / Ouvrière d'élevage en production de volailles",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "ouvrier meulage polissage": {
+    "intitule": "Ouvrier de meulage et de polissage",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1203",
+        "libelle": "ouvrier / ouvrière paysagiste",
+        "via": "ONISEP",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1208",
+        "libelle": "Ouvrier / Ouvrière du paysage",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1210",
+        "libelle": "Ouvrier forestier / Ouvrière forestière",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "parqueteur": {
+    "intitule": "Parqueteur",
+    "code_rome": "F1609",
+    "libelle_rome": "Poseur / Poseuse de revêtements de sols",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1609",
+        "libelle": "Parqueteur / Parqueteuse",
+        "via": "ROME",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "pediatre": {
+    "intitule": "Pédiatre",
+    "code_rome": "J1115",
+    "libelle_rome": "Pédiatre",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.335",
+    "candidats": [
+      {
+        "code_rome": "J1115",
+        "libelle": "Pédiatre",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "J1102",
+        "libelle": "pédiatre",
+        "via": "ONISEP",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "peintre decorateur": {
+    "intitule": "Peintre décorateur",
+    "code_rome": "F1606",
+    "libelle_rome": "Peintre en bâtiment",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1606",
+        "libelle": "Peintre décorateur / Peintre décoratrice",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "B1104",
+        "libelle": "Artiste peintre décorateur / Artiste peintre décoratrice",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "B1302",
+        "libelle": "Peintre-fileur-décorateur / Peintre-fileuse-décoratrice en céramique",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "pharmacien": {
+    "intitule": "Pharmacien",
+    "code_rome": "J1202",
+    "libelle_rome": "Pharmacien / Pharmacienne",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1202",
+        "libelle": "Pharmacien / Pharmacienne",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "H1507",
+        "libelle": "Pharmacien / Pharmacienne réglementaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H1513",
+        "libelle": "Pharmacien / Pharmacienne en pharmacovigilance",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "photographe": {
+    "intitule": "Photographe",
+    "code_rome": "E1201",
+    "libelle_rome": "Photographe professionnel / Photographe professionnelle",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.883",
+    "candidats": [
+      {
+        "code_rome": "E1201",
+        "libelle": "Photographe",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "E1114",
+        "libelle": "Reporter / Reportrice photographe",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "E1106",
+        "libelle": "reporter-photographe / reportrice-photographe",
+        "via": "ONISEP",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "pilote ligne": {
+    "intitule": "Pilote de ligne",
+    "code_rome": "N2102",
+    "libelle_rome": "Pilote de ligne",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.400",
+    "candidats": [
+      {
+        "code_rome": "N2102",
+        "libelle": "Pilote de ligne",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "H2301",
+        "libelle": "pilote de ligne automatisée",
+        "via": "ONISEP",
+        "score": 0.8
+      },
+      {
+        "code_rome": "N2103",
+        "libelle": "Pilote instructeur / Instructrice (avion de ligne)",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "plombier chauffagiste": {
+    "intitule": "Plombier - Chauffagiste",
+    "code_rome": "F1620",
+    "libelle_rome": "Installateur / Installatrice chauffage et climatisation",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1620",
+        "libelle": "Plombier / Plombière chauffagiste",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "I1316",
+        "libelle": "Electricien plombier / Electricienne plombière chauffagiste",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "F1603",
+        "libelle": "Plombier / Plombière",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "plongeur": {
+    "intitule": "Plongeur",
+    "code_rome": "G1605",
+    "libelle_rome": "Plongeur officier / Plongeuse officière de cuisine",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1605",
+        "libelle": "Plongeur / Plongeuse en restauration",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "I1502",
+        "libelle": "Plongeur scaphandrier / Plongeuse scaphandrière",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "I1510",
+        "libelle": "Plongeur / Plongeuse scientifique et technique",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "manuelle",
+    "statut": "verifie",
+    "nb_rapports": 5
+  },
+  "policier": {
+    "intitule": "Policier",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1704",
+        "libelle": "Policier / Policière aux frontières",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K1707",
+        "libelle": "Policier municipal / Policière municipale",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "praticien activite physique adaptee apa": {
+    "intitule": "Praticien en Activité Physique Adaptée (APA)",
+    "code_rome": "J1415",
+    "libelle_rome": "Enseignant / Enseignante en activité physique adaptée (EAPA)",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1414",
+        "libelle": "Coordinateur / Coordinatrice en activité physique adaptée",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1220",
+        "libelle": "Moniteur / Monitrice d'activités physiques et sportives adaptées",
+        "via": "ROME",
+        "score": 0.6
+      },
+      {
+        "code_rome": "J1415",
+        "libelle": "Enseignant / Enseignante en activité physique adaptée (EAPA)",
+        "via": "ROME",
+        "score": 0.6
+      }
+    ],
+    "methode": "manuelle",
+    "statut": "verifie",
+    "nb_rapports": 8
+  },
+  "preparateur physique": {
+    "intitule": "Préparateur physique",
+    "code_rome": "G1218",
+    "libelle_rome": "Préparateur / Préparatrice physique",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.531",
+    "candidats": [
+      {
+        "code_rome": "G1218",
+        "libelle": "Préparateur / Préparatrice physique",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1510",
+        "libelle": "Préparateur / Préparatrice d'équidés",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "E1312",
+        "libelle": "Préparateur / Préparatrice de copies",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "producteur realisateur": {
+    "intitule": "Producteur / réalisateur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1302",
+        "libelle": "producteur / productrice",
+        "via": "ONISEP",
+        "score": 0.67
+      },
+      {
+        "code_rome": "L1306",
+        "libelle": "Réalisateur / Réalisatrice",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1405",
+        "libelle": "Producteur / Productrice d'ananas",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "professeur architecture enseignement superieur": {
+    "intitule": "Professeur d'architecture (enseignement supérieur)",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2108",
+        "libelle": "Professeur / Professeure de l'enseignement supérieur",
+        "via": "ROME",
+        "score": 0.86
+      },
+      {
+        "code_rome": "K2109",
+        "libelle": "professeur / professeure dans l'enseignement agricole",
+        "via": "ONISEP",
+        "score": 0.57
+      },
+      {
+        "code_rome": "K2107",
+        "libelle": "Professeur spécialisé / Professeure spécialisée de l'enseignement général",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "professeur ecole": {
+    "intitule": "Professeur des écoles",
+    "code_rome": "K2106",
+    "libelle_rome": "Professeur / Professeure des écoles",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.557",
+    "candidats": [
+      {
+        "code_rome": "K2106",
+        "libelle": "Professeur / Professeure des écoles",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K2105",
+        "libelle": "Professeur / Professeure d'école nationale de musique",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2136",
+        "libelle": "Professeur / Professeure d'école nationale d'art",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "professeur secondaire": {
+    "intitule": "Professeur du secondaire",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1204",
+        "libelle": "professeur / professeure de sport",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "G1209",
+        "libelle": "Professeur / Professeure de yoga",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K2105",
+        "libelle": "Professeur / Professeure de musique",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 5
+  },
+  "psychologue clinicien": {
+    "intitule": "Psychologue clinicien",
+    "code_rome": "K1104",
+    "libelle_rome": "Psychologue",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1104",
+        "libelle": "Psychologue clinicien / Psychologue clinicienne",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K1111",
+        "libelle": "Psychologue-psychanalyste",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K1113",
+        "libelle": "Psychologue du travail",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 2
+  },
+  "psychologue education nationale psy second degre": {
+    "intitule": "Psychologue de l'Éducation nationale (Psy-EN) second degré",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1114",
+        "libelle": "Psychologue de l'Education Nationale, Education Développement Apprentissage (EDA)",
+        "via": "ROME",
+        "score": 0.46
+      },
+      {
+        "code_rome": "K2112",
+        "libelle": "psychologue de l'Éducation nationale spécialité éducation, développement et apprentissages",
+        "via": "ONISEP",
+        "score": 0.46
+      },
+      {
+        "code_rome": "J1107",
+        "libelle": "Médecin de l'Education Nationale",
+        "via": "ROME",
+        "score": 0.44
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "recruteur main oeuvre agricole": {
+    "intitule": "Recruteur de main-d'œuvre agricole",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1101",
+        "libelle": "Médecin Inspecteur Régional du Travail et de la Main d'œuvre -MIRTMO-",
+        "via": "ROME",
+        "score": 0.36
+      },
+      {
+        "code_rome": "A1101",
+        "libelle": "Tractoriste agricole",
+        "via": "ROME",
+        "score": 0.33
+      },
+      {
+        "code_rome": "A1301",
+        "libelle": "conseiller / conseillère agricole",
+        "via": "ONISEP",
+        "score": 0.33
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "responsable chaine approvisionnement": {
+    "intitule": "Responsable de la chaîne d'approvisionnement",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N1301",
+        "libelle": "responsable approvisionnement",
+        "via": "ONISEP",
+        "score": 0.8
+      },
+      {
+        "code_rome": "H2507",
+        "libelle": "Responsable de chaîne de production",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "M1102",
+        "libelle": "Responsable achats et approvisionnement",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "responsable egalite diversite": {
+    "intitule": "Responsable Égalité et Diversité",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1510",
+        "libelle": "Responsable diversité et égalité des chances",
+        "via": "ROME",
+        "score": 0.86
+      },
+      {
+        "code_rome": "A1217",
+        "libelle": "Responsable de gardes",
+        "via": "ROME",
+        "score": 0.4
+      },
+      {
+        "code_rome": "A1312",
+        "libelle": "Responsable Biodiversité",
+        "via": "ROME",
+        "score": 0.4
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "responsable formation": {
+    "intitule": "Responsable de la formation",
+    "code_rome": "M1502",
+    "libelle_rome": "Chargé / Chargée de recrutement",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.30",
+    "candidats": [
+      {
+        "code_rome": "M1502",
+        "libelle": "responsable de formation",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "K1731",
+        "libelle": "Responsable de la formation du combattant",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K2148",
+        "libelle": "Responsable de centre de formation",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "responsable relation sociale": {
+    "intitule": "Responsable des relations sociales",
+    "code_rome": "M1512",
+    "libelle_rome": "Directeur / Directrice des relations sociales",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1512",
+        "libelle": "Responsable des relations sociales",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "E1103",
+        "libelle": "Responsable des relations extérieures",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "E1109",
+        "libelle": "Responsable des relations internes",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "responsable ressource humaine": {
+    "intitule": "Responsable des ressources humaines",
+    "code_rome": "M1503",
+    "libelle_rome": "Directeur / Directrice des Ressources Humaines (DRH)",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.697",
+    "candidats": [
+      {
+        "code_rome": "M1503",
+        "libelle": "responsable des ressources humaines",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "K1614",
+        "libelle": "Responsable des ressources documentaires",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "K2111",
+        "libelle": "Formateur / Formatrice ressources humaines",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "responsable restauration": {
+    "intitule": "Responsable en restauration",
+    "code_rome": "G1410",
+    "libelle_rome": "Directeur / Directrice de la restauration",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1410",
+        "libelle": "Responsable de restauration",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1605",
+        "libelle": "Responsable de la plonge en restauration",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "G1403",
+        "libelle": "Responsable restauration en établissement touristique",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "responsable search marketing": {
+    "intitule": "Responsable Search Marketing",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1705",
+        "libelle": "Responsable marketing",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "M1711",
+        "libelle": "Responsable du marketing",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "M1716",
+        "libelle": "Responsable marketing Internet",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "responsable service administratif": {
+    "intitule": "Responsable des services administratifs",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1216",
+        "libelle": "Responsable des services généraux et administratifs",
+        "via": "ROME",
+        "score": 0.86
+      },
+      {
+        "code_rome": "M1704",
+        "libelle": "Responsable administratif / Responsable administrative du service clients",
+        "via": "ROME",
+        "score": 0.86
+      },
+      {
+        "code_rome": "M1205",
+        "libelle": "Responsable administratif / Responsable administrative",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "responsable service social": {
+    "intitule": "Responsable de service social",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1303",
+        "libelle": "Responsable de station-service",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "D1516",
+        "libelle": "Responsable de service marchandisage",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "E1103",
+        "libelle": "Responsable du service de presse",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "sage femme": {
+    "intitule": "Sage-femme",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "J1104",
+        "libelle": "Homme sage-femme / Sage-femme",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "J1502",
+        "libelle": "Cadre de santé Sage-femme",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "G1501",
+        "libelle": "femme / valet de chambre",
+        "via": "ONISEP",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "sapeur pompier": {
+    "intitule": "Sapeur-pompier",
+    "code_rome": "K1745",
+    "libelle_rome": "Pompier / Pompière",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.572",
+    "candidats": [
+      {
+        "code_rome": "K1745",
+        "libelle": "Sapeur-pompier / Sapeuse-pompière",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "K1705",
+        "libelle": "sapeur-pompier / sapeuse-pompière",
+        "via": "ONISEP",
+        "score": 1
+      },
+      {
+        "code_rome": "A1504",
+        "libelle": "Vétérinaire sapeur-pompier / Vétérinaire sapeuse-pompière",
+        "via": "ROME",
+        "score": 0.8
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 4
+  },
+  "scenographe": {
+    "intitule": "Scénographe",
+    "code_rome": "L1513",
+    "libelle_rome": "Scénographe",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1513",
+        "libelle": "Scénographe",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "B1301",
+        "libelle": "Scénographe produits",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "L1503",
+        "libelle": "décorateur-scénographe / décoratrice-scénographe",
+        "via": "ONISEP",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "secretaire assistant administratif": {
+    "intitule": "Secrétaire / Assistant administratif",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "M1607",
+        "libelle": "Assistant administratif / Assistante administrative",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "C1401",
+        "libelle": "Assistant administratif / Assistante administrative d'assurances",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "D1401",
+        "libelle": "Assistant administratif et commercial / Assistante administrative et commerciale",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "serveur": {
+    "intitule": "Serveur",
+    "code_rome": "G1803",
+    "libelle_rome": "Serveur / Serveuse en restauration",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1803",
+        "libelle": "Serveur / Serveuse",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1809",
+        "libelle": "Serveur / Serveuse de café",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "M1843",
+        "libelle": "Administrateur / Administratrice de serveurs",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 5
+  },
+  "signaleur": {
+    "intitule": "Signaleur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "N3203",
+        "libelle": "Ouvrier portuaire signaleur / Ouvrière portuaire signaleuse",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "soigneur animalier": {
+    "intitule": "Soigneur animalier",
+    "code_rome": "A1506",
+    "libelle_rome": "Soigneur animalier / Soigneuse animalière",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1506",
+        "libelle": "Soigneur animalier / Soigneuse animalière",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1421",
+        "libelle": "Palefrenier soigneur / Palefrenière soigneuse",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1504",
+        "libelle": "Dentiste animalier / Animalière (vétérinaire)",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "soudeur": {
+    "intitule": "Soudeur",
+    "code_rome": "H2913",
+    "libelle_rome": "Soudeur / Soudeuse",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.899",
+    "candidats": [
+      {
+        "code_rome": "H2913",
+        "libelle": "Soudeur / Soudeuse",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "H2902",
+        "libelle": "Chaudronnier soudeur / Chaudronnière soudeuse",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H2909",
+        "libelle": "Soudeur / Soudeuse en lunetterie",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "surveillant espace loisir maitre nageur sauveteur mns pisteur secouriste": {
+    "intitule": "Surveillant des espaces de loisirs (Maître-nageur sauveteur (MNS) / Pisteur-secouriste",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "G1224",
+        "libelle": "Maître-nageur sauveteur / Maître-nageuse sauveteuse",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "G1204",
+        "libelle": "maître-nageur sauveteur / maîtresse-nageuse sauveteuse",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "K1705",
+        "libelle": "pisteur / pisteuse secouriste",
+        "via": "ONISEP",
+        "score": 0.36
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 3
+  },
+  "tailleur pierre": {
+    "intitule": "Tailleur de pierre",
+    "code_rome": "F1612",
+    "libelle_rome": "Tailleur / Tailleuse de pierre",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.295",
+    "candidats": [
+      {
+        "code_rome": "F1612",
+        "libelle": "Tailleur / Tailleuse de pierre",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "B1607",
+        "libelle": "Tailleur / Tailleuse de pierres fines",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "B1813",
+        "libelle": "Tailleur / Tailleuse",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "technicien assainissement": {
+    "intitule": "Technicien d'assainissement",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K2307",
+        "libelle": "Technicien / Technicienne du nettoiement et de l'assainissement",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "K2301",
+        "libelle": "Technicien / Technicienne de contrôle de réseau d'assainissement",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1203",
+        "libelle": "technicien / technicienne paysagiste",
+        "via": "ONISEP",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 2
+  },
+  "technicien chauffage ventilation climatisation cvc": {
+    "intitule": "Technicien en chauffage, ventilation et climatisation (CVC)",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "I1316",
+        "libelle": "Technicien / Technicienne de maintenance Chauffage, Ventilation et Climatisation (CVC)",
+        "via": "ROME",
+        "score": 0.91
+      },
+      {
+        "code_rome": "F1620",
+        "libelle": "Installateur / Installatrice chauffage et climatisation",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "I1308",
+        "libelle": "Technicien / Technicienne de maintenance en chauffage",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "technicien geometre topographe": {
+    "intitule": "Technicien géomètre-topographe",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1107",
+        "libelle": "Géomètre-topographe",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "F1109",
+        "libelle": "Aide-géomètre-topographe",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "F1131",
+        "libelle": "Technicien / Technicienne géomètre du cadastre",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "technicien ophtalmologie": {
+    "intitule": "Technicien en ophtalmologie",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "A1203",
+        "libelle": "technicien / technicienne paysagiste",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1204",
+        "libelle": "technicien / technicienne de rivière",
+        "via": "ONISEP",
+        "score": 0.5
+      },
+      {
+        "code_rome": "A1211",
+        "libelle": "Technicien / Technicienne paysagiste",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "technicien prevention feu foret": {
+    "intitule": "Technicien de prévention des feux de forêt",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "K1701",
+        "libelle": "Technicien / Technicienne des appuis feux",
+        "via": "ROME",
+        "score": 0.57
+      },
+      {
+        "code_rome": "H1303",
+        "libelle": "Technicien / Technicienne en prévention des risques industriels",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "H1309",
+        "libelle": "Technicien / Technicienne Prévention des Risques Radioprotection Nucléaire",
+        "via": "ROME",
+        "score": 0.44
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "technicien solaire thermique": {
+    "intitule": "Technicien Solaire Thermique",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "F1610",
+        "libelle": "Technicien / Technicienne en énergie solaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H3402",
+        "libelle": "Technicien / Technicienne traitement thermique",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "H2701",
+        "libelle": "Technicien / Technicienne d'exploitation en production d'énergie thermique",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "technicien son": {
+    "intitule": "Technicien du son",
+    "code_rome": "L1508",
+    "libelle_rome": "Ingénieur / Ingénieure du son",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "L1508",
+        "libelle": "Technicien / Technicienne du son",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "I1329",
+        "libelle": "Technicien / Technicienne son-vidéo",
+        "via": "ROME",
+        "score": 0.8
+      },
+      {
+        "code_rome": "A1203",
+        "libelle": "technicien / technicienne paysagiste",
+        "via": "ONISEP",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "televendeur": {
+    "intitule": "Télévendeur",
+    "code_rome": "D1408",
+    "libelle_rome": "Conseiller / Conseillère clientèle à distance",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1408",
+        "libelle": "Télévendeur / Télévendeuse",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "G1303",
+        "libelle": "Conseiller télévendeur / Conseillère télévendeuse de voyages",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "thanatopracteur": {
+    "intitule": "Thanatopracteur",
+    "code_rome": "K2603",
+    "libelle_rome": "Thanatopracteur / Thanatopractrice",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.247",
+    "candidats": [
+      {
+        "code_rome": "K2603",
+        "libelle": "Thanatopracteur / Thanatopractrice",
+        "via": "ROME",
+        "score": 1
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  },
+  "vendeur ambulant": {
+    "intitule": "Vendeur ambulant",
+    "code_rome": "D1110",
+    "libelle_rome": "Vendeur ambulant / Vendeuse ambulante",
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "D1110",
+        "libelle": "Vendeur ambulant / Vendeuse ambulante",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "C1210",
+        "libelle": "Vendeur / Vendeuse en devises",
+        "via": "ROME",
+        "score": 0.5
+      },
+      {
+        "code_rome": "C1211",
+        "libelle": "Guichetier vendeur / Guichetière vendeuse",
+        "via": "ROME",
+        "score": 0.5
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 3
+  },
+  "vendeur": {
+    "intitule": "Vendeur",
+    "code_rome": null,
+    "libelle_rome": null,
+    "onisep_url": null,
+    "candidats": [
+      {
+        "code_rome": "C1210",
+        "libelle": "Vendeur / Vendeuse en devises",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "C1211",
+        "libelle": "Guichetier vendeur / Guichetière vendeuse",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "C1504",
+        "libelle": "Vendeur / Vendeuse immobilier",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "candidat",
+    "statut": "a_verifier",
+    "nb_rapports": 1
+  },
+  "veterinaire": {
+    "intitule": "Vétérinaire",
+    "code_rome": "A1504",
+    "libelle_rome": "Vétérinaire",
+    "onisep_url": "https://www.onisep.fr/http/redirection/metier/slug/MET.171",
+    "candidats": [
+      {
+        "code_rome": "A1504",
+        "libelle": "Vétérinaire",
+        "via": "ROME",
+        "score": 1
+      },
+      {
+        "code_rome": "A1305",
+        "libelle": "Technicien / Technicienne vétérinaire",
+        "via": "ROME",
+        "score": 0.67
+      },
+      {
+        "code_rome": "A1501",
+        "libelle": "Auxiliaire vétérinaire",
+        "via": "ROME",
+        "score": 0.67
+      }
+    ],
+    "methode": "exacte",
+    "statut": "verifie",
+    "nb_rapports": 1
+  }
+}
