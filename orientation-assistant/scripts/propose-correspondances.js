@@ -121,7 +121,7 @@ function rapprocher(intitule, index, rome) {
 
     for (const n of index) {
 
-        if (!n.code_rome) continue; // nom sans code ROME : inutilisable comme candidat
+        if (!n.code_rome) continue; // nom sans code ROME => inutilisable comme candidat
 
         const s = score(m, n.mots);
 
