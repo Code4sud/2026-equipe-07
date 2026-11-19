@@ -56,6 +56,6 @@ export const actions = {
 
         // Succès : on envoie le jeune sur la page de SON rapport.
         // redirect() est en dehors du try/catch (il fonctionne en "lançant" une exception).
-        redirect(303, '/rapport');
+        // redirect(303, '/rapport');
     }
 };
