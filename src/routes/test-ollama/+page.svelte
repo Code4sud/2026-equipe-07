@@ -109,6 +109,8 @@
 	<section class="etat">
 		{#if rapport}
 			<p class="ok">✓ Rapport « {rapport.fichier ?? 'PDF'} » : {rapport.metiers.length} métiers — {rapport.metiers.join(', ')}</p>
+			{#if rapport.json}<p class="petit">JSON généré : <code>{rapport.json}</code></p>{/if}
+			{#if rapport.warnings?.length}<p class="ko">Avertissements : {rapport.warnings.join(' ')}</p>{/if}
 			<button type="button" onclick={retirerPdf}>Retirer</button>
 		{:else}
 			<label for="pdf">Rapport PDF (optionnel) :</label>

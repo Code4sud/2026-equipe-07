@@ -12,11 +12,27 @@ import { extractRapport } from '#lib/server/pdf.js';
 import { creerSession, lireSession, supprimerSession, COOKIE_SID, DUREE_SESSION_MS } from '#lib/server/session.js';
 import { construireSources, PROMPT_SYSTEME } from '#lib/server/rag.js';
 import { ficheMetier, metiersProches } from '#lib/server/knowledge.js';
+import { nomSur } from '#lib/server/validation.js';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+// JSON générés à partir des PDF (dev uniquement). Données personnelles : à ne pas commiter.
+const DOSSIER_JSON = resolve('data/rapports/json');
 
 const TAILLE_MAX_PDF = 10 * 1024 * 1024;
 
 /** Résumé du rapport pour l'affichage */
-const resume = (r) => ({ fichier: r.fichier ?? null, zones: r.zones?.length ?? 0, metiers: r.metiers.map((m) => m.intitule) });
+const resume = (r) => ({ fichier: r.nom ?? null, zones: r.zones?.length ?? 0, metiers: r.metiers.map((m) => m.intitule) });
+
+/** Vue d'ensemble issue du JSON généré : zones (durée, explication) et métiers proposés dans chacune */
+function vueEnsemble(rapport) {
+    return rapport.zones
+        .map((z) => {
+            const liste = rapport.metiers.filter((m) => m.zone === z.numero).map((m) => m.intitule);
+            return `Zone ${z.numero} (p. ${z.page}) — ${z.titre ?? ''}. ${z.explication}\n  Métiers : ${z.vide || !liste.length ? 'aucun' : liste.join(', ')}`;
+        })
+        .join('\n');
+}
 
 /** Contexte texte : tous les métiers du rapport + zones + fiches ROME vérifiées */
 function contexteRapport(rapport) {
@@ -33,7 +49,7 @@ function contexteRapport(rapport) {
 
         return `### ${m.intitule}\n${txt}${appellations}`;
     });
-    return blocs.join('\n\n').slice(0, 12000);
+    return `VUE D'ENSEMBLE DU RAPPORT (${rapport.nom}, ${rapport.pages} pages)\n${vueEnsemble(rapport)}\n\n${blocs.join('\n\n')}`.slice(0, 12000);
 }
 
 const url = () => (process.env.OLLAMA_URL || 'http://localhost:11434').replace(/\/$/, '');
@@ -77,10 +93,16 @@ export async function PUT({ request, cookies, url }) {
     if (new TextDecoder().decode(buffer.slice(0, 5)) !== '%PDF-') return json({ erreur: "Ce fichier n'est pas un PDF." }, { status: 400 });
 
     try {
-        const rapport = await extractRapport(buffer, pdf.name);
+        const rapport = await extractRapport(buffer, nomSur(pdf.name));
         const sid = creerSession(rapport);
+
+        // Fichier JSON exploitable généré à partir du PDF : data/rapports/json/<nom>.json
+        mkdirSync(DOSSIER_JSON, { recursive: true });
+        const fichierJson = `${rapport.nom.replace(/\.pdf$/i, '').replace(/[^\w.-]+/g, '_')}.json`;
+        writeFileSync(resolve(DOSSIER_JSON, fichierJson), JSON.stringify(rapport, null, 2), 'utf-8');
+
         cookies.set(COOKIE_SID, sid, { path: '/', httpOnly: true, sameSite: 'lax', secure: url.protocol === 'https:', maxAge: DUREE_SESSION_MS / 1000 });
-        return json({ rapport: resume(rapport) });
+        return json({ rapport: { ...resume(rapport), json: `data/rapports/json/${fichierJson}`, warnings: rapport.warnings } });
     } catch {
         return json({ erreur: "Le PDF n'a pas pu être analysé." }, { status: 422 });
     }
@@ -142,7 +164,7 @@ export async function POST({ request, cookies }) {
                 {
                     role: 'system',
                     content:
-                        `${PROMPT_SYSTEME}\nPersonnalise ta réponse avec le rapport du jeune quand il existe, et cite les appellations ROME (métiers proches). Ne t'appuie que sur les sources ci-dessous.` +
+                        `${PROMPT_SYSTEME}\nPersonnalise ta réponse avec le rapport du jeune quand il existe : cite ses métiers par leur nom, sa zone et la durée de préparation, les pages du rapport, et cite les appellations ROME (métiers proches). Varie tes formulations. Ne t'appuie que sur les sources ci-dessous.` +
                         (rapport ? `\n\nRAPPORT DU JEUNE ET FICHES ROME (sources) :\n${contexteRapport(rapport)}` : '') +
                         blocProches
                 },
