@@ -39,4 +39,5 @@ export async function chat(messages, { timeoutMs = 60000, model, options } = {})
 	const texte = json?.message?.content;
 	if (typeof texte !== 'string') throw new OllamaError('REPONSE_INVALIDE', 'Réponse Ollama inattendue.');
 	return texte;
+
 }

@@ -294,6 +294,11 @@ function construireRapport(lignes, nom, pages) {
 		// Numéro de page en bas, ex. "8/17" : on l'ignore.
 		if (/^\d+\s*\/\s*\d+$/.test(texte)) continue;
 
+		// Mention de fin de rapport (« Les résultats présentés dans ce bilan proviennent de travaux
+		// expérimentaux... ») : présente dans les 18 rapports, après le dernier métier
+		// Ce n'est pas une info sur un métier -> on arrête la lecture ici (sinon collée au dernier métier).
+		if (/^«?\s*Les résultats présentés dans ce bilan/.test(texte)) break;
+
 		// --- Cas 2 : intitulé de métier, ex. "Barista" ---------------------------
 		if (hauteur >= HAUTEUR_METIER_MIN && hauteur <= HAUTEUR_METIER_MAX) {
 

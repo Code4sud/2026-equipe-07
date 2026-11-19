@@ -1,83 +1,58 @@
-// =============================================================================
-// Accueil — import du PDF, rapport de la session, suppression des données
-// -----------------------------------------------------------------------------
-// Le PDF est lu EN MÉMOIRE : jamais écrit sur disque, jamais envoyé à un tiers.
-// On ne logge rien du contenu du rapport.
-// =============================================================================
 
 import { fail, redirect } from '@sveltejs/kit';
-import { dev } from '$app/environment';
-import { extractRapport, PdfError } from '#lib/server/pdf.js';
-import { validerPdf } from '#lib/server/validation.js';
-import { ficheMetier } from '#lib/server/knowledge.js';
-import { creerSession, lireSession, supprimerSession, COOKIE_SID, DUREE_SESSION_MS } from '#lib/server/session.js';
+import { extractRapport } from '#lib/server/pdf.js';
+import { saveReport } from '#lib/server/reports.js';
 
-/** @type {import('./$types').PageServerLoad} */
-export function load({ cookies }) {
+// Taille maximale acceptée : 10 Mo (un rapport fait environ 1 Mo)
+const TAILLE_MAX = 10 * 1024 * 1024;
 
-    const sid = cookies.get(COOKIE_SID);
-    const rapport = lireSession(sid);
-
-    // Cookie présent mais session expirée / supprimée : on le nettoie
-    if (sid && !rapport) cookies.delete(COOKIE_SID, { path: '/' });
-
-    if (!rapport) return { rapport: null, statuts: {} };
-
-    // Statut de correspondance ROME de chaque métier (vérifié / à vérifier / aucun / inconnu)
-    const statuts = Object.fromEntries(rapport.metiers.map((m) => [m.id, ficheMetier(m.intitule).statut]));
-
-    return { rapport, statuts };
-}
-
-/** @type {import('./$types').Actions} */
+/**
+ * @type {import('./$types').Actions}
+ */
 export const actions = {
+  importReport: async ({ request }) => {
 
-    importer: async ({ request, cookies }) => {
+    const formData = await request.formData();
+    const pdf = formData.get('rapport-pdf'); // nom du champ <input name="rapport-pdf">
 
-        let formData;
-        try {
-            formData = await request.formData();
-        } catch {
-            return fail(400, { code: 'TYPE_INVALIDE', message: 'Envoi invalide : choisis un fichier PDF.' });
-        }
-
-        const pdf = await validerPdf(formData.get('file'));
-        if (!pdf.ok) return fail(400, { code: pdf.code, message: pdf.message });
-
-        let rapport;
-        try {
-            rapport = await extractRapport(pdf.data, pdf.nom);
-        } catch (e) {
-            if (!(e instanceof PdfError)) console.error('[importer] erreur inattendue :', e?.name);
-            return fail(400, { code: 'PDF_ILLISIBLE', message: 'Ce PDF ne peut pas être lu.' });
-        }
-
-        // Un PDF valide mais qui n'est pas un rapport : on ne fabrique rien
-        if (rapport.zones.length === 0) {
-            return fail(400, {
-                code: 'PDF_ILLISIBLE',
-                message: "Ce PDF ne ressemble pas à un « Rapport des Possibles » : aucune zone de métiers trouvée."
-            });
-        }
-
-        // Un nouvel import remplace l'éventuelle session précédente
-        supprimerSession(cookies.get(COOKIE_SID));
-
-        const sid = creerSession(rapport);
-        cookies.set(COOKIE_SID, sid, {
-            path: '/',
-            httpOnly: true,
-            sameSite: 'lax',
-            secure: !dev,
-            maxAge: DUREE_SESSION_MS / 1000
-        });
-
-        redirect(303, '/');
-    },
-
-    supprimer: async ({ cookies }) => {
-        supprimerSession(cookies.get(COOKIE_SID));
-        cookies.delete(COOKIE_SID, { path: '/' });
-        return { supprime: true };
+    // Aucun fichier, ou fichier vide
+    if (!(pdf instanceof File) || pdf.size === 0) {
+      return fail(400, { error: 'Aucun fichier PDF téléchargé' });
     }
+
+    // Trop gros : on refuse avant de le lire
+    if (pdf.size > TAILLE_MAX) {
+      return fail(413, { error: 'Fichier trop volumineux (10 Mo maximum)' });
+    }
+
+    // Type annoncé par le navigateur (facile à falsifier : on revérifie juste après)
+    if (pdf.type !== 'application/pdf') {
+      return fail(400, { error: 'Type de fichier invalide' });
+    }
+
+    const buffer = new Uint8Array(await pdf.arrayBuffer());
+
+    // Vrai type : un PDF commence toujours par les 5 caractères "%PDF-"
+    if (new TextDecoder().decode(buffer.slice(0, 5)) !== '%PDF-') {
+
+      return fail(400, { error: "Ce fichier n'est pas un PDF" });
+    }
+
+    let id;
+
+    try {
+
+      const rapport = await extractRapport(buffer, pdf.name);
+      id = saveReport(rapport); // en mémoire, 1 h
+    } catch (error) {
+      
+      // Message court dans le terminal : pas le contenu du rapport
+      console.error('Impossible de lire le rapport PDF :', /** @type {Error} */ (error).message);
+      return fail(422, { error: "Le PDF n'a pas pu être analysé" });
+    }
+
+    // Succès : on envoie le jeune sur la page de SON rapport.
+    // redirect() est en dehors du try/catch (il fonctionne en "lançant" une exception).
+    redirect(303, `/rapport/${id}`);
+  }
 };
