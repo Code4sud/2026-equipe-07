@@ -1,6 +1,5 @@
 import { fail } from "@sveltejs/kit";
 import { extractRapport } from "#lib/server/pdf.js";
-import { saveReport } from "#lib/server/reports.js";
 
 /**
  * @type {import('./$types').Actions}
@@ -24,19 +23,16 @@ export const actions = {
 
     const buffer = new Uint8Array(await pdf.arrayBuffer());
 
-    let parsedReport;
     try {
-      parsedReport = await extractRapport(buffer, pdf.name);
+      const parsedReport = await extractRapport(buffer, pdf.name);
+      console.log("Rapport PDF analysé avec succès", parsedReport);
+      return {
+        text: JSON.stringify(parsedReport, null, 4),
+      };
+
     } catch (error) {
       console.error("Impossible de parser le rapport PDF", error);
       return fail(422, { error: "Le PDF n'a pas pu être analysé" });
-    }
-
-    try {
-      return { path: await saveReport(parsedReport) };
-    } catch (error) {
-      console.error("Impossible d'enregistrer le rapport JSON", error);
-      return fail(500, { error: "Le rapport n'a pas pu être enregistré" });
     }
   },
 };
