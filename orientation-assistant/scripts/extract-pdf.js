@@ -14,6 +14,9 @@ try {
 	console.log(JSON.stringify(rapport, null, 2));
 	console.error(`\n${rapport.zones.length} zones, ${rapport.metiers.length} métiers, ${rapport.warnings.length} avertissement(s)`);
 } catch (err) {
-	console.error(`Erreur ${err.code ?? ''} : ${err.message}`);
+	
+	// err est de type "unknown" : on précise qu'il s'agit d'une erreur (PdfError a un .code)
+	const e = /** @type {{ code?: string, message: string }} */ (err);
+	console.error(`Erreur ${e.code ?? ''} : ${e.message}`);
 	process.exit(1);
 }
