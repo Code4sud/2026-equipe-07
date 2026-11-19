@@ -53,8 +53,8 @@
   },
   "adjoint administratif territorial": {
     "intitule": "Adjoint administratif territorial",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1602",
+    "libelle_rome": "Secrétaire administratif / Secrétaire administrative de collectivité territoriale",
     "onisep_url": null,
     "candidats": [
       {
@@ -76,8 +76,8 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "agent accueil animation": {
@@ -111,8 +111,8 @@
   },
   "agent accueil billetterie": {
     "intitule": "Agent d'accueil et billetterie",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1225",
+    "libelle_rome": "Ouvreur / Ouvreuse de salle de spectacles",
     "onisep_url": null,
     "candidats": [
       {
@@ -134,8 +134,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 5
   },
   "agent accueil": {
@@ -169,8 +169,8 @@
   },
   "agent artiste sportif": {
     "intitule": "Agent d'artistes et de sportifs",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "L1303",
+    "libelle_rome": "Agent / Agente de talent",
     "onisep_url": null,
     "candidats": [
       {
@@ -192,14 +192,14 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "agent blanchisserie": {
     "intitule": "Agent de blanchisserie",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2201",
+    "libelle_rome": "Employé / Employée de blanchisserie industrielle",
     "onisep_url": null,
     "candidats": [
       {
@@ -221,8 +221,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "agent bord": {
@@ -250,14 +250,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "agent entretien": {
     "intitule": "Agent d'entretien",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2205",
+    "libelle_rome": "Agent / Agente de propreté de locaux",
     "onisep_url": null,
     "candidats": [
       {
@@ -279,14 +279,14 @@
         "score": 0.8
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "agent funeraire": {
     "intitule": "Agent funéraire",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2601",
+    "libelle_rome": "Porteur / Porteuse funéraire",
     "onisep_url": null,
     "candidats": [
       {
@@ -308,14 +308,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 4
   },
   "agent manoeuvre ferroviaire": {
     "intitule": "Agent de manœuvre ferroviaire",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "N4401",
+    "libelle_rome": "Aiguilleur / Aiguilleure du rail",
     "onisep_url": null,
     "candidats": [
       {
@@ -337,8 +337,8 @@
         "score": 0.57
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "agent service restauration": {
@@ -401,8 +401,8 @@
   },
   "aide cuisinier": {
     "intitule": "Aide-cuisinier",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1602",
+    "libelle_rome": "Commis / Commise de cuisine",
     "onisep_url": null,
     "candidats": [
       {
@@ -424,8 +424,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "aide medico psychologique": {
@@ -546,8 +546,8 @@
   },
   "arbitre mediateur conciliateur": {
     "intitule": "Arbitre, Médiateur et Conciliateur",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1913",
+    "libelle_rome": "Médiateur / Médiatrice judiciaire",
     "onisep_url": null,
     "candidats": [
       {
@@ -569,8 +569,8 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "architecte interieur": {
@@ -836,8 +836,8 @@
   },
   "bagagiste": {
     "intitule": "Bagagiste",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1702",
+    "libelle_rome": "Bagagiste en établissement hôtelier",
     "onisep_url": null,
     "candidats": [
       {
@@ -859,8 +859,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "barbier": {
@@ -928,8 +928,8 @@
   },
   "bucheron abatteur": {
     "intitule": "Bûcheron abatteur",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "A1201",
+    "libelle_rome": "Bûcheron / Bûcheronne",
     "onisep_url": null,
     "candidats": [
       {
@@ -951,8 +951,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 4
   },
   "cadreur": {
@@ -980,8 +980,8 @@
   },
   "capitaine navire": {
     "intitule": "Capitaine de navire",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "N3106",
+    "libelle_rome": "Officier / Officière de la marine marchande",
     "onisep_url": null,
     "candidats": [
       {
@@ -1003,8 +1003,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "charpentier boi": {
@@ -1090,14 +1090,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 2
   },
   "chef equipe police": {
     "intitule": "Chef d'équipe de police",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1708",
+    "libelle_rome": "Gardien / Gardienne de la paix",
     "onisep_url": null,
     "candidats": [
       {
@@ -1119,14 +1119,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "chef equipe surveillant penitentiaire": {
     "intitule": "Chef d'équipe de surveillants pénitentiaires",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1711",
+    "libelle_rome": "Surveillant pénitentiaire / Surveillante pénitentiaire",
     "onisep_url": null,
     "candidats": [
       {
@@ -1148,8 +1148,8 @@
         "score": 0.57
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 4
   },
   "chef etablissement scolaire": {
@@ -1299,8 +1299,8 @@
   },
   "concierge": {
     "intitule": "Concierge",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1701",
+    "libelle_rome": "Concierge d'hôtel",
     "onisep_url": null,
     "candidats": [
       {
@@ -1322,14 +1322,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 4
   },
   "conducteur ambulance": {
     "intitule": "Conducteur d'ambulance",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "J1310",
+    "libelle_rome": "Auxiliaire ambulancier / Auxiliaire ambulancière",
     "onisep_url": null,
     "candidats": [
       {
@@ -1351,14 +1351,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "conducteur appareil levage palan treuil": {
     "intitule": "Conducteur d'appareils de levage (palan, treuil)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "N1104",
+    "libelle_rome": "Pontier / Pontière",
     "onisep_url": null,
     "candidats": [
       {
@@ -1380,14 +1380,14 @@
         "score": 0.44
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conducteur bus car": {
     "intitule": "Conducteur de bus / car",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "N4103",
+    "libelle_rome": "Conducteur / Conductrice de bus",
     "onisep_url": null,
     "candidats": [
       {
@@ -1409,8 +1409,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "conducteur drague": {
@@ -1444,8 +1444,8 @@
   },
   "conducteur engin exploitation miniere carriere": {
     "intitule": "Conducteur d'engins d'exploitation minière ou de carrière",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "F1302",
+    "libelle_rome": "Conducteur / Conductrice d'engins de chantier",
     "onisep_url": null,
     "candidats": [
       {
@@ -1467,8 +1467,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conducteur engin forestier": {
@@ -1502,8 +1502,8 @@
   },
   "conducteur manoeuvre ferroviaire": {
     "intitule": "Conducteur de manœuvre ferroviaire",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "N4303",
+    "libelle_rome": "Conducteur / Conductrice d'engins de manœuvre du réseau ferré",
     "onisep_url": null,
     "candidats": [
       {
@@ -1525,14 +1525,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conseiller clientele": {
     "intitule": "Conseiller clientèle",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "D1408",
+    "libelle_rome": "Conseiller / Conseillère clientèle à distance",
     "onisep_url": null,
     "candidats": [
       {
@@ -1554,8 +1554,8 @@
         "score": 0.8
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conseiller conjugal familial": {
@@ -1589,8 +1589,8 @@
   },
   "conseiller credit": {
     "intitule": "Conseiller en crédit",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "C1217",
+    "libelle_rome": "Conseiller commercial / Conseillère commerciale de banque",
     "onisep_url": null,
     "candidats": [
       {
@@ -1612,14 +1612,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conseiller financier": {
     "intitule": "Conseiller financier",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "C1301",
+    "libelle_rome": "Trader",
     "onisep_url": null,
     "candidats": [
       {
@@ -1641,8 +1641,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conseiller gestion patrimoine": {
@@ -1676,8 +1676,8 @@
   },
   "conseiller pedagogique": {
     "intitule": "Conseiller pédagogique",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2102",
+    "libelle_rome": "Coordinateur / Coordinatrice pédagogique",
     "onisep_url": null,
     "candidats": [
       {
@@ -1699,8 +1699,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "conseiller penitentiaire insertion probation": {
@@ -1757,8 +1757,8 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 5
   },
   "coordinateur programme fitnes bien etre": {
@@ -1786,14 +1786,14 @@
         "score": 0.44
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 5
   },
   "coordinateur recherche clinique": {
     "intitule": "Coordinateur de recherche clinique",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "H1211",
+    "libelle_rome": "Attaché / Attachée de recherche clinique (ARC)",
     "onisep_url": null,
     "candidats": [
       {
@@ -1815,8 +1815,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "coursier": {
@@ -1931,14 +1931,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "dessinateur projeteur batiment genie civil": {
     "intitule": "Dessinateur projeteur en bâtiment et génie civil",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "F1104",
+    "libelle_rome": "Dessinateur-projeteur / Dessinatrice-projeteuse de la construction",
     "onisep_url": null,
     "candidats": [
       {
@@ -1960,14 +1960,14 @@
         "score": 0.6
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "dessinateur projeteur electronique": {
     "intitule": "Dessinateur-projeteur électronique",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "H1236",
+    "libelle_rome": "Dessinateur-projeteur / Dessinatrice-projeteuse en électricité-électronique",
     "onisep_url": null,
     "candidats": [
       {
@@ -1989,8 +1989,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "dessinateur projeteur mecanique": {
@@ -2053,8 +2053,8 @@
   },
   "directeur general": {
     "intitule": "Directeur général",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1301",
+    "libelle_rome": "Dirigeant / Dirigeante d'entreprise privée",
     "onisep_url": null,
     "candidats": [
       {
@@ -2076,14 +2076,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "directeur pompe funebre": {
     "intitule": "Directeur de pompes funèbres",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2606",
+    "libelle_rome": "Directeur / Directrice d'entreprise funéraire",
     "onisep_url": null,
     "candidats": [
       {
@@ -2105,14 +2105,14 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 5
   },
   "directeur spa": {
     "intitule": "Directeur de spa",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "D1231",
+    "libelle_rome": "Responsable espace bien-être",
     "onisep_url": null,
     "candidats": [
       {
@@ -2134,14 +2134,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "directeur structure accueil petite enfance": {
     "intitule": "Directeur de structure d'accueil de la petite enfance",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1216",
+    "libelle_rome": "Responsable de structure multi accueil petite enfance",
     "onisep_url": null,
     "candidats": [
       {
@@ -2163,14 +2163,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "educateur animau": {
     "intitule": "Éducateur d'animaux",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "A1508",
+    "libelle_rome": "Dresseur animalier / Dresseuse animalière",
     "onisep_url": null,
     "candidats": [
       {
@@ -2192,14 +2192,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "employe restauration rapide": {
     "intitule": "Employé de restauration rapide",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1603",
+    "libelle_rome": "Equipier polyvalent / Equipière polyvalente de restauration rapide",
     "onisep_url": null,
     "candidats": [
       {
@@ -2221,14 +2221,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 4
   },
   "enqueteur": {
     "intitule": "Enquêteur",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1401",
+    "libelle_rome": "Enquêteur / Enquêtrice sondage",
     "onisep_url": null,
     "candidats": [
       {
@@ -2250,14 +2250,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "enseignant art theatre musique enseignement superieur": {
     "intitule": "Enseignant en arts, théâtre et musique dans l'enseignement supérieur",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2136",
+    "libelle_rome": "Professeur territorial / Professeure territoriale d'enseignement artistique",
     "onisep_url": null,
     "candidats": [
       {
@@ -2279,14 +2279,14 @@
         "score": 0.44
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "enseignant chercheur economie": {
     "intitule": "Enseignant-chercheur en économie",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2108",
+    "libelle_rome": "Professeur / Professeure des universités",
     "onisep_url": null,
     "candidats": [
       {
@@ -2308,14 +2308,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "enseignant chercheur ingenierie": {
     "intitule": "Enseignant-chercheur en ingénierie",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2108",
+    "libelle_rome": "Professeur / Professeure des universités",
     "onisep_url": null,
     "candidats": [
       {
@@ -2337,14 +2337,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "enseignant chercheur philosophie science religion": {
     "intitule": "Enseignant-chercheur en philosophie et en sciences des religions",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2108",
+    "libelle_rome": "Professeur / Professeure des universités",
     "onisep_url": null,
     "candidats": [
       {
@@ -2366,14 +2366,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "enseignant chercheur science terre atmosphere ocean espace": {
     "intitule": "Enseignant-Chercheur en Sciences de la Terre, de l'Atmosphère, des Océans et de l'Espace",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2108",
+    "libelle_rome": "Professeur / Professeure des universités",
     "onisep_url": null,
     "candidats": [
       {
@@ -2395,14 +2395,14 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "enseignant chercheur stap": {
     "intitule": "Enseignant-chercheur en STAPS",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2108",
+    "libelle_rome": "Professeur / Professeure des universités",
     "onisep_url": null,
     "candidats": [
       {
@@ -2424,14 +2424,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "enseignant specialise college uli segpa": {
     "intitule": "Enseignant spécialisé (collège - ULIS/SEGPA)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2106",
+    "libelle_rome": "Professeur / Professeure des écoles",
     "onisep_url": null,
     "candidats": [
       {
@@ -2453,8 +2453,8 @@
         "score": 0.29
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "entraineur sportif": {
@@ -2586,8 +2586,8 @@
   },
   "garde chasse agent office francai biodiversite ofb": {
     "intitule": "Garde-chasse / Agent de l'Office Français de la Biodiversité (OFB)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "A1204",
+    "libelle_rome": "Garde nature",
     "onisep_url": null,
     "candidats": [
       {
@@ -2609,8 +2609,8 @@
         "score": 0.36
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "garde enfant domicile": {
@@ -2644,8 +2644,8 @@
   },
   "gerant fond investissement": {
     "intitule": "Gérant de fonds d'investissement",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "C1304",
+    "libelle_rome": "Gestionnaire d'organisme de placement collectif en valeurs mobilières -OPCVM-",
     "onisep_url": null,
     "candidats": [
       {
@@ -2667,8 +2667,8 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "graphiste": {
@@ -2702,8 +2702,8 @@
   },
   "guide naturaliste mediateur environnement": {
     "intitule": "Guide naturaliste / Médiateur environnement",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "G1242",
+    "libelle_rome": "Médiateur / Médiatrice scientifique",
     "onisep_url": null,
     "candidats": [
       {
@@ -2725,8 +2725,8 @@
         "score": 0.33
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 5
   },
   "guide touristique": {
@@ -2812,8 +2812,8 @@
   },
   "hotesse air steward": {
     "intitule": "Hôtesse de l'air / Steward",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "N2101",
+    "libelle_rome": "Personnel Navigant Commercial (PNC)",
     "onisep_url": null,
     "candidats": [
       {
@@ -2835,14 +2835,14 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "iade infirmier anesthesiste diplome etat": {
     "intitule": "IADE (Infirmier Anesthésiste Diplômé d'État)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "J1503",
+    "libelle_rome": "Infirmier / Infirmière anesthésiste (IADE)",
     "onisep_url": null,
     "candidats": [
       {
@@ -2864,8 +2864,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "infirmier": {
@@ -2922,8 +2922,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "interprete traducteur": {
@@ -2986,8 +2986,8 @@
   },
   "juge administratif": {
     "intitule": "Juge administratif",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1904",
+    "libelle_rome": "Juge",
     "onisep_url": null,
     "candidats": [
       {
@@ -3009,14 +3009,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "manoeuvre petrolier": {
     "intitule": "Manœuvre pétrolier",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "F1403",
+    "libelle_rome": "Foreur / Foreuse pétrole et gaz",
     "onisep_url": null,
     "candidats": [
       {
@@ -3038,8 +3038,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "masseur kinesitherapeute": {
@@ -3183,8 +3183,8 @@
   },
   "monteur pneu": {
     "intitule": "Monteur de pneus",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "I1611",
+    "libelle_rome": "Préparateur / Préparatrice de véhicules automobiles",
     "onisep_url": null,
     "candidats": [
       {
@@ -3206,8 +3206,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "musicotherapeute": {
@@ -3229,8 +3229,8 @@
   },
   "operateur station epuration": {
     "intitule": "Opérateur de station d'épuration",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2322",
+    "libelle_rome": "Technicien / Technicienne en traitement des eaux",
     "onisep_url": null,
     "candidats": [
       {
@@ -3252,14 +3252,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "operateur telephonique": {
     "intitule": "Opérateur téléphonique",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1614",
+    "libelle_rome": "Standardiste",
     "onisep_url": null,
     "candidats": [
       {
@@ -3281,14 +3281,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "organisateur evenement": {
     "intitule": "Organisateur d'événements",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "E1107",
+    "libelle_rome": "Chef / Cheffe de projet événementiel",
     "onisep_url": null,
     "candidats": [
       {
@@ -3310,8 +3310,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "orthodontiste": {
@@ -3368,8 +3368,8 @@
   },
   "ouvrier carriere": {
     "intitule": "Ouvrier de carrière",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "F1402",
+    "libelle_rome": "Boutefeu",
     "onisep_url": null,
     "candidats": [
       {
@@ -3391,14 +3391,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "ouvrier elevage": {
     "intitule": "Ouvrier d'élevage",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "A1403",
+    "libelle_rome": "Aide d'élevage agricole",
     "onisep_url": null,
     "candidats": [
       {
@@ -3420,14 +3420,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "ouvrier meulage polissage": {
     "intitule": "Ouvrier de meulage et de polissage",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "H3401",
+    "libelle_rome": "Opérateur / Opératrice de traitement d'abrasion de surface",
     "onisep_url": null,
     "candidats": [
       {
@@ -3449,8 +3449,8 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "parqueteur": {
@@ -3669,8 +3669,8 @@
   },
   "policier": {
     "intitule": "Policier",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1708",
+    "libelle_rome": "Gardien / Gardienne de la paix",
     "onisep_url": null,
     "candidats": [
       {
@@ -3686,8 +3686,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "praticien activite physique adaptee apa": {
@@ -3750,8 +3750,8 @@
   },
   "producteur realisateur": {
     "intitule": "Producteur / réalisateur",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "L1306",
+    "libelle_rome": "Réalisateur / Réalisatrice audiovisuel",
     "onisep_url": null,
     "candidats": [
       {
@@ -3773,14 +3773,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "professeur architecture enseignement superieur": {
     "intitule": "Professeur d'architecture (enseignement supérieur)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2108",
+    "libelle_rome": "Professeur / Professeure des universités",
     "onisep_url": null,
     "candidats": [
       {
@@ -3802,8 +3802,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "professeur ecole": {
@@ -3837,8 +3837,8 @@
   },
   "professeur secondaire": {
     "intitule": "Professeur du secondaire",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2107",
+    "libelle_rome": "Professeur / Professeure de collège et de lycée",
     "onisep_url": null,
     "candidats": [
       {
@@ -3860,8 +3860,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 5
   },
   "psychologue clinicien": {
@@ -3895,8 +3895,8 @@
   },
   "psychologue education nationale psy second degre": {
     "intitule": "Psychologue de l'Éducation nationale (Psy-EN) second degré",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1107",
+    "libelle_rome": "Conseiller / Conseillère d'orientation psychologue",
     "onisep_url": null,
     "candidats": [
       {
@@ -3918,14 +3918,14 @@
         "score": 0.44
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "recruteur main oeuvre agricole": {
     "intitule": "Recruteur de main-d'œuvre agricole",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1502",
+    "libelle_rome": "Chargé / Chargée de recrutement",
     "onisep_url": null,
     "candidats": [
       {
@@ -3947,14 +3947,14 @@
         "score": 0.33
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "responsable chaine approvisionnement": {
     "intitule": "Responsable de la chaîne d'approvisionnement",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "H1405",
+    "libelle_rome": "Responsable supply chain en industrie",
     "onisep_url": null,
     "candidats": [
       {
@@ -3976,14 +3976,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "responsable egalite diversite": {
     "intitule": "Responsable Égalité et Diversité",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1510",
+    "libelle_rome": "Chargé / Chargée de mission RH diversité handicap",
     "onisep_url": null,
     "candidats": [
       {
@@ -4005,8 +4005,8 @@
         "score": 0.4
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "responsable formation": {
@@ -4127,8 +4127,8 @@
   },
   "responsable search marketing": {
     "intitule": "Responsable Search Marketing",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "E1405",
+    "libelle_rome": "Référenceur / Référenceuse web",
     "onisep_url": null,
     "candidats": [
       {
@@ -4150,8 +4150,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "responsable service administratif": {
@@ -4179,14 +4179,14 @@
         "score": 0.8
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "responsable service social": {
     "intitule": "Responsable de service social",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K1230",
+    "libelle_rome": "Coordonnateur / Coordonnatrice de service social",
     "onisep_url": null,
     "candidats": [
       {
@@ -4208,14 +4208,14 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "sage femme": {
     "intitule": "Sage-femme",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "J1104",
+    "libelle_rome": "Homme sage-femme / Sage-femme",
     "onisep_url": null,
     "candidats": [
       {
@@ -4237,8 +4237,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 3
   },
   "sapeur pompier": {
@@ -4301,8 +4301,8 @@
   },
   "secretaire assistant administratif": {
     "intitule": "Secrétaire / Assistant administratif",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "M1607",
+    "libelle_rome": "Assistant administratif / Assistante administrative",
     "onisep_url": null,
     "candidats": [
       {
@@ -4324,8 +4324,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "serveur": {
@@ -4370,8 +4370,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 3
   },
   "soigneur animalier": {
@@ -4457,8 +4457,8 @@
         "score": 0.36
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 3
   },
   "tailleur pierre": {
@@ -4492,8 +4492,8 @@
   },
   "technicien assainissement": {
     "intitule": "Technicien d'assainissement",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "K2301",
+    "libelle_rome": "Agent / Agente d'exploitation des réseaux d'assainissement",
     "onisep_url": null,
     "candidats": [
       {
@@ -4515,14 +4515,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 2
   },
   "technicien chauffage ventilation climatisation cvc": {
     "intitule": "Technicien en chauffage, ventilation et climatisation (CVC)",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "I1316",
+    "libelle_rome": "Technicien / Technicienne de maintenance Chauffage, Ventilation et Climatisation (CVC)",
     "onisep_url": null,
     "candidats": [
       {
@@ -4544,14 +4544,14 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "technicien geometre topographe": {
     "intitule": "Technicien géomètre-topographe",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "F1107",
+    "libelle_rome": "Géomètre",
     "onisep_url": null,
     "candidats": [
       {
@@ -4573,8 +4573,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "technicien ophtalmologie": {
@@ -4602,8 +4602,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "technicien prevention feu foret": {
@@ -4631,14 +4631,14 @@
         "score": 0.44
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "technicien solaire thermique": {
     "intitule": "Technicien Solaire Thermique",
-    "code_rome": null,
-    "libelle_rome": null,
+    "code_rome": "F1610",
+    "libelle_rome": "Installateur mainteneur / Installatrice mainteneuse en systèmes solaires, thermiques et photovoltaïques",
     "onisep_url": null,
     "candidats": [
       {
@@ -4660,8 +4660,8 @@
         "score": 0.5
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "verifie",
     "nb_rapports": 1
   },
   "technicien son": {
@@ -4787,8 +4787,8 @@
         "score": 0.67
       }
     ],
-    "methode": "candidat",
-    "statut": "a_verifier",
+    "methode": "manuelle",
+    "statut": "aucun",
     "nb_rapports": 1
   },
   "veterinaire": {
