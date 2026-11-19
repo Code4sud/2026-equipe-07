@@ -10,17 +10,17 @@ _Deux ou trois phrases : le problème, la solution, pour qui._
 
 ## Lancer le projet
 
-L'application (SvelteKit + Node.js) est dans le sous-dossier `orientation-assistant/` : toutes les commandes se lancent depuis ce dossier. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) lancé en local.
+Application SvelteKit + Node.js, à la racine du dépôt. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) lancé en local.
 
 ```bash
-cd orientation-assistant
 npm install
+cp .env.example .env
 npm run dev
 ```
 
-Pourquoi un sous-dossier : le workflow GitHub Pages du dépôt lance `npm run build` s'il trouve un `package.json` à la racine et publie `dist/`. Notre application est un serveur Node (adapter-node, sortie `build/`), qui ne peut pas tourner sur GitHub Pages. La racine garde donc `index.html`, `projet.json` et `captures/` pour la fiche du hackathon.
+GitHub Pages : le workflow du dépôt lance `npm run build` puis publie `dist/`. Notre application est un serveur Node (adapter-node, sortie `build/`) qui ne peut pas tourner sur GitHub Pages : après le build, `scripts/pages.js` copie dans `dist/` la page statique du hackathon (`index.html`, `captures/`).
 
-Les Rapports des Possibles ne sont pas dans le dépôt (`orientation-assistant/data/rapports/` est ignoré par git) : les copier à la main pour les tests (`npm run test:pdf`).
+Les Rapports des Possibles ne sont pas dans le dépôt (`data/rapports/` est ignoré par git) : les copier à la main pour les tests (`npm run test:pdf`).
 
 ## Travailler sur le projet (équipe)
 
@@ -29,7 +29,6 @@ Les Rapports des Possibles ne sont pas dans le dépôt (`orientation-assistant/d
 ```bash
 git checkout main
 git pull
-cd orientation-assistant
 npm install
 npm run test:knowledge   # doit afficher : pass 5 (fonctionne sans les PDF)
 ```
@@ -64,7 +63,7 @@ Pour travailler : créer sa branche à partir de `main` à jour (`git checkout -
 - **Une seule personne à la fois** modifie `correspondances.json` ou relance `scripts/propose-correspondances.js` (le script garde les choix `"manuelle"` mais réécrit le fichier : deux personnes en même temps = conflit git). À deux, se partager les intitulés (A-L / M-Z) et commiter souvent.
 - **Aucun Rapport des Possibles, aucune clé, aucun `.env` dans un commit** : vérifier `git status` avant chaque `git commit`.
 
-### Commandes utiles (depuis `orientation-assistant/`)
+### Commandes utiles (depuis la racine du dépôt)
 
 | Commande | Rôle |
 |---|---|
