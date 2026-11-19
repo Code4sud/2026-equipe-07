@@ -40,6 +40,7 @@ export function load({ params, cookies }) {
                 : null,
             onisep_url: fiche.onisep_url
         },
+        // Les 3 questions du sujet, proposées sous le chat
         suggestions: SUGGESTIONS
     };
 }

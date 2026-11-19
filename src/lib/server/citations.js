@@ -29,7 +29,8 @@ export const MESSAGE_REPLI =
 /**
  * Résultat de la vérification.
  * Omit<Source, 'texte'> = une Source SANS sa propriété "texte".
- * @typedef {{ statut: 'ok' | 'insuffisant', reponse: string, sources: Omit<Source, 'texte'>[] }} Verification
+ * invalides = nombre de numéros [n] inventés qui ont été retirés.
+ * @typedef {{ statut: 'ok' | 'insuffisant', reponse: string, sources: Omit<Source, 'texte'>[], invalides: number }} Verification
  */
 
 /**
@@ -54,13 +55,14 @@ export function numerosCites(texte) {
 
 /**
  * Vérifie une réponse du modèle par rapport aux sources fournies
- * @param {string} reponse texte renvoyé par le modèle
+ * @param {string | null | undefined} reponse texte renvoyé par le modèle (peut être vide ou absent)
  * @param {Source[]} sources sources réellement envoyées dans le contexte
  * @returns {Verification}
  */
 export function verifierReponse(reponse, sources) {
 
-    const texte = reponse.trim(); // enlève les espaces / retours à la ligne au début et à la fin
+    // Réponse absente (null, undefined) ou pas du texte : on la traite comme vide (pas de plantage)
+    const texte = typeof reponse === 'string' ? reponse.trim() : ''; // trim : espaces au début et à la fin
 
     // Les numéros qui existent vraiment. Set = liste sans doublon => avec .has() rapide
     const valides = new Set(sources.map((s) => s.n)); // ex. {1, 2, 3, 4}
@@ -68,8 +70,10 @@ export function verifierReponse(reponse, sources) {
     // Le modèle a lui-même dit qu'il ne savait pas -> on renvoie le message exact
     // (!texte = réponse vide)
     if (!texte || texte.includes('Je ne dispose pas d')) {
-        return { statut: 'insuffisant', reponse: MESSAGE_REPLI, sources: [] };
+        return { statut: 'insuffisant', reponse: MESSAGE_REPLI, sources: [], invalides: 0 };
     }
+
+    let invalides = 0; // compteur des numéros inventés retirés
 
     // On retire les citations inventées : [7] alors qu'il n'y a que 4 sources !!
     // replace(regex, fonction) : pour CHAQUE bloc [ ... ] trouvé, la fonction décide par quoi le remplacer
@@ -78,7 +82,9 @@ export function verifierReponse(reponse, sources) {
     const nettoye = texte.replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (/** @type {string} */ bloc, /** @type {string} */ liste) => {
 
         // "2, 9" -> [2, 9] -> on garde ceux qui existent -> [2]
-        const gardes = liste.split(',').map((n) => Number(n.trim())).filter((n) => valides.has(n));
+        const numeros = liste.split(',').map((n) => Number(n.trim()));
+        const gardes = numeros.filter((n) => valides.has(n));
+        invalides += numeros.length - gardes.length; // ex. [2, 9] -> 1 inventé
 
         // Au moins un bon numéro -> "[2]" ; aucun -> "" (le bloc disparaît du texte)
         return gardes.length ? `[${gardes.join(', ')}]` : ''; // bloc entièrement faux -> supprimé
@@ -90,7 +96,7 @@ export function verifierReponse(reponse, sources) {
 
     // Aucune citation valide => la réponse ne s'appuie sur rien de vérifiable -> repli
     if (cites.size === 0) {
-        return { statut: 'insuffisant', reponse: MESSAGE_REPLI, sources: [] };
+        return { statut: 'insuffisant', reponse: MESSAGE_REPLI, sources: [], invalides };
     }
 
     return {
@@ -103,6 +109,11 @@ export function verifierReponse(reponse, sources) {
         // Sources affichées = celles citées, SANS le texte complet (le navigateur n'en a pas besoin).
         // filter : garde les sources citées ; map : copie chaque source sans "texte"
         // ({ texte: _texte, ...reste }) => met "texte" de côté, "reste" = toutes les autres propriétés
-        sources: sources.filter((s) => cites.has(s.n)).map(({ texte: _texte, ...reste }) => reste)
+        sources: sources.filter((s) => cites.has(s.n)).map(({ texte: _texte, ...reste }) => reste),
+
+        invalides // nombre de [n] inventés retirés (0 si tout est bon)
     };
 }
+
+// Autre nom de verifierReponse, utilisé par tests/citations.test.js (équipe Ollama)
+export const verifierCitations = verifierReponse;
