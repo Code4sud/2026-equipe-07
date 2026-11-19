@@ -12,6 +12,7 @@ export class OllamaError extends Error {
 export async function chat(messages, { timeoutMs = 60000, model, options } = {}) {
 	const url = (process.env.OLLAMA_URL || 'http://localhost:11434').replace(/\/$/, '');
 	const apiKey = process.env.OLLAMA_API_KEY;
+	/** @type {Record<string, string>} */
 	const headers = { 'Content-Type': 'application/json' };
 	if (apiKey && apiKey !== 'OLLAMA_API_KEY') headers.Authorization = `Bearer ${apiKey}`;
 
@@ -29,7 +30,8 @@ export async function chat(messages, { timeoutMs = 60000, model, options } = {})
 			signal: AbortSignal.timeout(timeoutMs)
 		});
 	} catch (e) {
-		if (e.name === 'TimeoutError') throw new OllamaError('TIMEOUT', 'Le modèle a mis trop de temps à répondre.');
+		const errorName = e instanceof Error ? e.name : '';
+		if (errorName === 'TimeoutError') throw new OllamaError('TIMEOUT', 'Le modèle a mis trop de temps à répondre.');
 		throw new OllamaError('OLLAMA_INDISPONIBLE', 'Ollama est injoignable.');
 	}
 

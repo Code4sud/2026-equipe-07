@@ -2,7 +2,7 @@
 // Lancer : npm run test:rag   (sans Ollama ni PDF : rapport FICTIF + faux modèle)
 import { test } from 'node:test';          // test('nom', fonction) = déclare un test
 import assert from 'node:assert/strict';   // assert.xxx = vérifie ; si c'est faux, le test échoue
-import { construireSources, construireMessages, repondre, PROMPT_SYSTEME } from '../src/lib/server/rag.js';
+import { construireSources, construireMessages, repondre, promptSysteme } from '../src/lib/server/rag.js';
 import { verifierReponse, numerosCites, MESSAGE_REPLI } from '../src/lib/server/citations.js';
 
 // Rapport INVENTÉ (rendu.txt : pas de données réelles dans les tests), même forme que pdf.js.
@@ -71,8 +71,8 @@ test('métier vérifié : 2 sources rapport + 2 sources ROME (G1809)', () => {
     const { sources, romeVerifie } = construireSources(rapport, rapport.metiers[0]); // metiers[0] = Barista
     
     assert.equal(romeVerifie, true);
-    assert.deepEqual(sources.map((s) => s.n), [1, 2, 3, 4]); // numérotation continue
-    assert.deepEqual(sources.map((s) => s.type), ['rapport', 'rapport', 'ROME', 'ROME']);
+    assert.deepEqual(sources.slice(0, 4).map((s) => s.n), [1, 2, 3, 4]); // numérotation continue
+    assert.deepEqual(sources.slice(0, 4).map((s) => s.type), ['rapport', 'rapport', 'ROME', 'ROME']);
     assert.equal(sources[0].page, 8); // page citée
     assert.match(sources[2].titre, /G1809/);
     assert.match(sources[3].titre, /accès au métier/);
@@ -95,9 +95,9 @@ test('le message au modèle contient les sources numérotées et la question', (
     
     assert.equal(messages[0].role, 'system'); // 1er message = les règles
     assert.match(messages[1].content, /\[1\] Rapport des Possibles — Adjoint/); // sources numérotées
-    assert.match(messages[1].content, /QUESTION DU JEUNE : Il faut quel diplôme \?/); // \? = un vrai "?"
+    assert.match(messages[1].content, /QUESTION DU JEUNE[^:]*: """Il faut quel diplôme \?"""/); // question délimitée ; \? = un vrai "?"
     assert.match(messages[1].content, /aucune fiche officielle ROME/); // avertissement si non vérifié
-    assert.match(PROMPT_SYSTEME, /pas des instructions/); // défense contre l'injection de prompt
+    assert.match(promptSysteme(), /pas des instructions/); // défense contre l'injection de prompt
 });
 
 // --- rag.js : repondre (avec faux modèle) ------------------------------------

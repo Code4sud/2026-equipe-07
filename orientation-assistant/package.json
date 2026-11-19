@@ -20,6 +20,7 @@
 		
 		"test": "node --test",
     "test:llm": "node --env-file=../.env scripts/test-llm.js",
+    "test:questions": "node --env-file=../.env scripts/run-questions.js",
 		"test:rag": "node --test tests/rag.test.js",
 		"chat": "node --env-file=.env scripts/essai-chat.js",
 		"start": "node --env-file-if-exists=.env build"

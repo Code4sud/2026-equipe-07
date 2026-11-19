@@ -9,7 +9,7 @@
 import { json } from '@sveltejs/kit';
 import { lireSession, COOKIE_SID } from '#lib/server/session.js';
 import { validerId, validerQuestion } from '#lib/server/validation.js';
-import { ficheMetier } from '#lib/server/knowledge.js';
+import { chat } from '#lib/server/ollama.js';
 import { repondre } from '#lib/server/rag.js';
 
 const TAILLE_MAX_CORPS = 4 * 1024; // 4 Ko : largement assez pour une question de 500 caractères
@@ -47,8 +47,11 @@ export async function POST({ request, cookies }) {
 
     enCours.add(sid);
     try {
-        const zone = rapport.zones.find((z) => z.numero === metier.zone);
-        const resultat = await repondre(metier, zone, ficheMetier(metier.intitule), question.question);
+        // repondre construit les sources, appelle le modèle puis vérifie les citations
+        const resultat = await repondre(
+            { question: question.question, rapport, metierId: metier.id },
+            (messages) => chat(messages, { timeoutMs: 90_000, options: { temperature: 0.2, num_predict: 250 } })
+        );
         return json(resultat);
     } finally {
         enCours.delete(sid);

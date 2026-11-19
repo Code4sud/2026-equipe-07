@@ -18,7 +18,7 @@ export const MESSAGE_REPLI =
  * Une source envoyée au modèle (construite par rag.js)
  * @typedef {object} Source
  * @property {number} n numéro cité dans la réponse : [1], [2]...
- * @property {'rapport' | 'ROME'} type
+ * @property {'rapport' | 'ROME' | 'ONISEP'} type
  * @property {string} titre ex. "Rapport des Possibles — Barista"
  * @property {number | null} page page du PDF (sources "rapport")
  * @property {string | null} reference ex. "ROME 4.0 v62 du 19/10/2026 — G1809"
