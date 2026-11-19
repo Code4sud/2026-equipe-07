@@ -51,6 +51,7 @@ for (const fichier of fichiers) {
 
 			assert.ok(m.intitule.length > 2, `${m.id} : intitulé`);                 // intitulé non vide
 			assert.ok(m.description.length > 50, `${m.id} : description`);          // vraie description
+			assert.doesNotMatch(m.description, /travaux expérimentaux/, `${m.id} : mention de fin collée`); // bug corrigé
 			assert.ok(m.page >= 1 && m.page <= r.pages, `${m.id} : page`);          // page qui existe (citée comme source)
 		}
 		assert.ok(r.metiers.length <= 25, 'au plus 5 métiers par zone');            // 5 zones x 5 métiers max
@@ -62,6 +63,6 @@ test('un faux PDF est refusé avec le code PDF_ILLISIBLE', async () => {
 	
 	await assert.rejects(                                                     // rejects : la promesse DOIT échouer
 		extractRapport(new TextEncoder().encode('pas un pdf'), 'faux.pdf'),   // du texte transformé en octets
-		(err) => err.code === 'PDF_ILLISIBLE'                                 // ...et avec ce code-là
+		(/** @type {any} */ err) => err.code === 'PDF_ILLISIBLE'              // ...et avec ce code-là
 	);
 });
