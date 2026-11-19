@@ -2,7 +2,7 @@
   import ImportRapport from "#lib/components/ImportRapport.svelte";
 
   // form = résultat de l'action importReport (+page.server.js)=> fourni par SvelteKit
-  let { form } = $props();
+  let { data, form } = $props();
 </script>
 
 <section class="mx-8 mt-8">
@@ -58,3 +58,4 @@
   <p class="text-sm">Des réponses appuyées sur des sources publiques: ONISEP, ROME, Carif-Oref.</p>
 </section>
 
+<pre>{JSON.stringify(data, null, 4)}</pre>
