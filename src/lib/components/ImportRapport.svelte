@@ -3,19 +3,28 @@
   import { enhance } from '$app/forms';
   import { Download, Plus } from '@lucide/svelte';
 
-
   // form = résultat de l'action (ex. { error: "..." } en cas d'échec), transmis par la page
   let { form } = $props();
   let selectedFileName = $state('Aucun fichier sélectionné');
+
+  // true pendant l'envoi et l'analyse du PDF (1 à 2 s) : bouton désactivé + message
+  let envoi = $state(false);
 </script>
 
 <!-- enctype multipart : obligatoire pour envoyer un fichier -->
 <form class="flex flex-col gap-2"
   method="POST"
   enctype="multipart/form-data"
-  use:enhance
   action="?/importReport"
->
+  use:enhance={() => {
+    envoi = true; // au clic => début de l'envoi
+    return async ({ update }) => {
+      await update(); // résultat reçu : SvelteKit met à jour form et relance load() (liste des métiers)
+      envoi = false;
+      selectedFileName = 'Aucun fichier sélectionné'; // le champ fichier est vidé par update()
+    };
+  }}
+  >
   <div class="flex gap-2 items-center">
     <input
       id="import-pdf"
@@ -36,9 +45,10 @@
     </label>
     <span>{selectedFileName}</span>
   </div>
-  <button class="flex cursor-pointer gap-2 items-center rounded-2xl h-8 px-4 bg-emerald-900 text-neutral-50 mr-auto" type="submit">
+   <!-- disabled:opacity-50 : bouton grisé pendant l'analyse -->
+  <button class="flex cursor-pointer gap-2 items-center rounded-2xl h-8 px-4 bg-emerald-900 text-neutral-50 mr-auto disabled:opacity-50" type="submit" disabled={envoi}>
     <Download size=16 />
-    <span>Importer</span>
+    <span>{envoi ? 'Analyse de ton rapport…' : 'Importer'}</span>
   </button>
 </form>
 
