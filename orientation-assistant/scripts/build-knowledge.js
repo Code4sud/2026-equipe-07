@@ -233,7 +233,12 @@ async function construireRome(liensRome) {
             // sort((a, b) => a[0] - b[0]) => trie par numéro de phrase => [[2,"B"],[1,"A"]] → [[1,"A"],[2,"B"]]
             // .map(([, t]) => t) => Garde seulement le texte => → ["A", "B"]
             // join => "A B"
-            liste.length ? liste.sort((a, b) => a[0] - b[0]).map(([, t]) => t).join(' ') : null;
+            liste.length
+                ? liste
+                      .sort((a, b) => a[0] - b[0])                      // phrases dans l'ordre (position_phrase)
+                      .map(([, t]) => (/[.!?]$/.test(t) ? t : `${t}.`)) // ajoute un point si la phrase n'en a pas
+                      .join(' ')                                        // colle avec un espace
+                : null;                                                 // pas de phrase -> null (on n'invente rien)
         
         rome[code].definition = coller(p.definition);
         rome[code].acces = coller(p.acces);
