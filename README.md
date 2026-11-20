@@ -6,21 +6,35 @@ Projet réalisé à Nice les 18, 19 et 20 novembre 2026, sur le thème **« L'or
 
 __Sujet__: L'assistant d'exploration des métiers
 
-_Deux ou trois phrases : le problème, la solution, pour qui._
+**OrienTi** aide le jeune qui sort du Centre des Possibles avec son Rapport des Possibles : une vingtaine de métiers, souvent inconnus, répartis en cinq zones de durée de formation. Il importe son rapport PDF, choisit un métier et pose ses questions (« c'est quoi ? », « quel diplôme ? », « sans le bac ? ») à un assistant IA open weight (Qwen 2.5 via Ollama, en local). Les réponses s'appuient sur son rapport et sur les fiches ROME 4.0 de France Travail, reliées aux métiers du rapport par une correspondance vérifiée à la main (171 intitulés).
+
+### Comment ça marche
+
+| Étape | Fichier |
+|---|---|
+| Extraction du PDF (zones, métiers, descriptions, pages), en mémoire | `src/lib/server/pdf.js` |
+| Session d'une heure maximum, bouton « Supprimer mes données » | `src/lib/server/session.js` |
+| Fiches ROME / ONISEP (open data) et correspondances vérifiées | `data/knowledge/`, `src/lib/server/knowledge.js` |
+| Sources numérotées, contrôle des citations, réponse « je ne sais pas » | `src/lib/server/rag.js`, `citations.js`, route `/api/chat` |
+| Appel au modèle (Ollama local) | `src/lib/server/ollama.js` |
+| Chat de la page d'accueil | `src/lib/components/Chat.svelte`, route `/api/ollama` (mode dev uniquement) |
 
 ## Lancer le projet
 
-L'application (SvelteKit + Node.js) est dans le sous-dossier `orientation-assistant/` : toutes les commandes se lancent depuis ce dossier. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) lancé en local.
+Application SvelteKit + Node.js, à la racine du dépôt. Prérequis : Node.js 22.13 ou plus, et [Ollama](https://ollama.com) installé et lancé.
 
 ```bash
-cd orientation-assistant
 npm install
+cp .env.example .env
+ollama pull qwen2.5:3b
 npm run dev
 ```
 
-Pourquoi un sous-dossier : le workflow GitHub Pages du dépôt lance `npm run build` s'il trouve un `package.json` à la racine et publie `dist/`. Notre application est un serveur Node (adapter-node, sortie `build/`), qui ne peut pas tourner sur GitHub Pages. La racine garde donc `index.html`, `projet.json` et `captures/` pour la fiche du hackathon.
+Ouvrir http://localhost:5173 et importer un Rapport des Possibles (PDF). Le chat utilise `npm run dev` : sa route `/api/ollama` renvoie 404 en production (`npm start`).
 
-Les Rapports des Possibles ne sont pas dans le dépôt (`orientation-assistant/data/rapports/` est ignoré par git) : les copier à la main pour les tests (`npm run test:pdf`).
+GitHub Pages : le workflow du dépôt lance `npm run build` puis publie `dist/`. Notre application est un serveur Node (adapter-node, sortie `build/`) qui ne peut pas tourner sur GitHub Pages : après le build, `scripts/pages.js` copie dans `dist/` la page statique du hackathon (`index.html`, `captures/`).
+
+Les Rapports des Possibles ne sont pas dans le dépôt (`data/rapports/` est ignoré par git) : les copier à la main pour les tests (`npm run test:pdf`).
 
 ## Travailler sur le projet (équipe)
 
@@ -29,7 +43,6 @@ Les Rapports des Possibles ne sont pas dans le dépôt (`orientation-assistant/d
 ```bash
 git checkout main
 git pull
-cd orientation-assistant
 npm install
 npm run test:knowledge   # doit afficher : pass 5 (fonctionne sans les PDF)
 ```
@@ -64,7 +77,7 @@ Pour travailler : créer sa branche à partir de `main` à jour (`git checkout -
 - **Une seule personne à la fois** modifie `correspondances.json` ou relance `scripts/propose-correspondances.js` (le script garde les choix `"manuelle"` mais réécrit le fichier : deux personnes en même temps = conflit git). À deux, se partager les intitulés (A-L / M-Z) et commiter souvent.
 - **Aucun Rapport des Possibles, aucune clé, aucun `.env` dans un commit** : vérifier `git status` avant chaque `git commit`.
 
-### Commandes utiles (depuis `orientation-assistant/`)
+### Commandes utiles (depuis la racine du dépôt)
 
 | Commande | Rôle |
 |---|---|
@@ -85,8 +98,7 @@ Toute la doc : https://orientation.code4sud.fr/doc/
 
 ## Démo en ligne
 
-Si votre projet est un site sans serveur, il est publié automatiquement sur GitHub Pages à chaque push :
-`https://code4sud.github.io/2026-equipe-07/`. Reportez cette adresse dans le champ `demo` de `projet.json`.
+Pas de démo en ligne : OrienTi a besoin d'un serveur Node et d'Ollama, ce que GitHub Pages ne fournit pas. La démonstration se fait en local (`npm run dev`), le champ `demo` de `projet.json` reste vide. L'adresse `https://code4sud.github.io/2026-equipe-07/` n'affiche que la page statique du hackathon.
 
 ## Licence
 

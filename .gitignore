@@ -1,7 +1,29 @@
+# Dépendances et sorties de build
+node_modules/
+/build/
+/dist/
+/.svelte-kit/
+.output
+.vercel
+.netlify
+.wrangler
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Configuration locale et secrets (seul .env.example est versionné)
 .env
 .env.*
-node_modules/
-dist/
+!.env.example
+!.env.test
+
+# Données privées ou volumineuses (rapports réels, open data brut) : dossiers gardés vides
+/data/rapports/*
+!/data/rapports/.gitkeep
+/data/open-data/*
+!/data/open-data/.gitkeep
+
+# Systèmes
+.DS_Store
+Thumbs.db
 __pycache__/
 .venv/
-.DS_Store
