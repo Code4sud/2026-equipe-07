@@ -15,9 +15,9 @@ __Sujet__: L'assistant d'exploration des métiers
 | Extraction du PDF (zones, métiers, descriptions, pages), en mémoire | `src/lib/server/pdf.js` |
 | Session d'une heure maximum, bouton « Supprimer mes données » | `src/lib/server/session.js` |
 | Fiches ROME / ONISEP (open data) et correspondances vérifiées | `data/knowledge/`, `src/lib/server/knowledge.js` |
-| Sources numérotées, contrôle des citations, réponse « je ne sais pas » | `src/lib/server/rag.js`, `citations.js`, route `/api/chat` |
+| Analyse de la question, sources numérotées, contrôle des citations, réponse « je ne sais pas » | `src/lib/server/rag.js`, `citations.js` |
 | Appel au modèle (Ollama local) | `src/lib/server/ollama.js` |
-| Chat de la page d'accueil | `src/lib/components/Chat.svelte`, route `/api/ollama` (mode dev uniquement) |
+| Chat de la page d'accueil (démo en local avec `npm run dev`) | `src/lib/components/Chat.svelte`, route `/api/ollama` |
 
 ## Lancer le projet
 
