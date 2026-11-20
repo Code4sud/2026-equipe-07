@@ -31,25 +31,21 @@
     chargement = true;
 
     try {
-      // Le métier choisi est rappelé au modèle dans la dernière question
       const historique = messages
         .filter((m) => m.role === "user" || m.role === "assistant")
         .map(({ role, content }) => ({ role, content }));
-      const dernier = historique[historique.length - 1];
-      if (metier) {
-        dernier.content = `À propos du métier « ${metier.intitule} » : ${dernier.content}`.slice(0, 1000);
-      }
 
+      // Le métier choisi voyage à part : le serveur analyse la question avant d'appeler le modèle
       const res = await fetch("/api/ollama", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ messages: historique }),
+        body: JSON.stringify({ messages: historique, metierId: metier?.id ?? null }),
       });
       const data = await res.json();
       messages.push(
         res.ok
           ? { role: "assistant", content: data.reponse }
-          : { role: "erreur", content: data.erreur ?? "Une erreur est survenue." },
+          : { role: "erreur", content: data.reponse ?? "Une erreur est survenue." },
       );
     } catch {
       messages.push({ role: "erreur", content: "Le serveur ne répond pas." });
