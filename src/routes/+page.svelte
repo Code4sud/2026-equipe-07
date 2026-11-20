@@ -111,7 +111,7 @@
       <p>On présisera où tu habites</p>
     </div>
   </div>
-  <p class="text-sm">Des réponses appuyées sur des sources publiques: ONISEP, ROME, Carif-Oref.</p>
+  <p class="text-sm">Des réponses appuyées sur des sources publiques: ONISEP, ROME.</p>
 </section>
 
 <!-- Zone du chat (composant de Denys). Il reçoit le métier choisi et appelle POST /api/chat { id, question }. -->
