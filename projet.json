@@ -6,5 +6,5 @@
   "stack": ["SvelteKit", "Svelte 5", "Node.js", "JavaScript", "Tailwind CSS", "Ollama", "Qwen 2.5", "pdf.js", "ROME 4.0", "ONISEP"],
   "demo": "",
   "video": "",
-  "captures": ["captures/orienTi_accueil.png", "captures/import_rapport.png", "captures/recap_rapport.png", "captures/question_prepare_libre.png", "captures/rapport_union_metier.png"]
+  "captures": ["captures/orienTi_accueil.png", "captures/import_rapport.png", "captures/recap_rapport.png", "captures/question_prepare_libre.png", "captures/rapport_union_metier.png", "captures/figma_page_accueil.png"]
 }
