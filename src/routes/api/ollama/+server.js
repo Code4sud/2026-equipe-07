@@ -1,17 +1,20 @@
 // =============================================================================
-// /api/test-ollama — outil de test, UNIQUEMENT en mode dev (404 en production)
-//   GET  -> état de la connexion : Ollama joignable ? le modèle est-il installé ?
-//   POST -> { messages: [{ role, content }] } -> { reponse, ms }
+// /api/ollama — chat de l'assistant
+//   GET    -> état de la connexion Ollama (dev uniquement)
+//   POST   -> { messages, metierId? } -> { statut, reponse, sources, suggestions }
+//             la question est ANALYSÉE par rag.js (validation, garde-fou, sources) avant le modèle,
+//             puis la réponse est vérifiée par citations.js.
+//   PUT    -> import d'un PDF + JSON généré (dev uniquement)
+//   DELETE -> retire le rapport de la session (dev uniquement)
 // Rien n'est enregistré ni loggé (ni questions, ni réponses).
 // =============================================================================
 
 import { json, error } from '@sveltejs/kit';
 import { dev } from '$app/environment';
-import { chat, OllamaError } from '#lib/server/ollama.js';
+import { chat } from '#lib/server/ollama.js';
 import { extractRapport } from '#lib/server/pdf.js';
 import { creerSession, lireSession, supprimerSession, COOKIE_SID, DUREE_SESSION_MS } from '#lib/server/session.js';
-import { construireSources, PROMPT_SYSTEME } from '#lib/server/rag.js';
-import { ficheMetier, metiersProches } from '#lib/server/knowledge.js';
+import { repondreQuestion, SUGGESTIONS } from '#lib/server/rag.js';
 import { nomSur } from '#lib/server/validation.js';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -24,33 +27,9 @@ const TAILLE_MAX_PDF = 10 * 1024 * 1024;
 /** Résumé du rapport pour l'affichage */
 const resume = (r) => ({ fichier: r.nom ?? null, zones: r.zones?.length ?? 0, metiers: r.metiers.map((m) => m.intitule) });
 
-/** Vue d'ensemble issue du JSON généré : zones (durée, explication) et métiers proposés dans chacune */
-function vueEnsemble(rapport) {
-    return rapport.zones
-        .map((z) => {
-            const liste = rapport.metiers.filter((m) => m.zone === z.numero).map((m) => m.intitule);
-            return `Zone ${z.numero} (p. ${z.page}) — ${z.titre ?? ''}. ${z.explication}\n  Métiers : ${z.vide || !liste.length ? 'aucun' : liste.join(', ')}`;
-        })
-        .join('\n');
-}
-
-/** Contexte texte : tous les métiers du rapport + zones + fiches ROME vérifiées */
-function contexteRapport(rapport) {
-    const blocs = rapport.metiers.map((m) => {
-        const { sources } = construireSources(rapport, m);
-        const txt = sources.map((s) => `- (${s.type}) ${s.titre} : ${s.texte}`).join('\n');
-
-        // correspondances.json (statut "verifie" uniquement) -> rome.json : appellations du métier
-        const fiche = ficheMetier(m.intitule);
-        const appellations =
-            fiche.statut === 'verifie' && fiche.rome?.appellations?.length
-                ? `\n- (ROME ${fiche.code_rome}) Appellations du métier : ${fiche.rome.appellations.slice(0, 25).join(' ; ')}`
-                : `\n- Aucune fiche ROME fiable pour ce métier : ne donne pas de détails officiels (diplômes, appellations).`;
-
-        return `### ${m.intitule}\n${txt}${appellations}`;
-    });
-    return `VUE D'ENSEMBLE DU RAPPORT (${rapport.nom}, ${rapport.pages} pages)\n${vueEnsemble(rapport)}\n\n${blocs.join('\n\n')}`.slice(0, 12000);
-}
+// Sessions dont une question est en cours (le modèle tourne sur CPU : une réponse à la fois)
+/** @type {Set<string>} */
+const enCours = (/** @type {any} */ (globalThis).__ollamaEnCours ??= new Set());
 
 const url = () => (process.env.OLLAMA_URL || 'http://localhost:11434').replace(/\/$/, '');
 const modele = () => process.env.LLM_MODEL || 'qwen2.5:3b';
@@ -120,13 +99,11 @@ export async function DELETE({ cookies }) {
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request, cookies }) {
 
-    if (!dev) error(404, 'Not found');
-
     let corps;
     try {
         corps = await request.json();
     } catch {
-        return json({ erreur: 'Requête invalide.' }, { status: 400 });
+        return json({ statut: 'erreur', reponse: 'Requête invalide.', sources: [], suggestions: SUGGESTIONS }, { status: 400 });
     }
 
     const messages = corps?.messages;
@@ -142,40 +119,31 @@ export async function POST({ request, cookies }) {
                 m.content.length <= MAX_LONGUEUR
         );
 
-    if (!valide) return json({ erreur: `Messages invalides (max ${MAX_MESSAGES}, ${MAX_LONGUEUR} caractères).` }, { status: 400 });
+    if (!valide) {
+        return json({ statut: 'erreur', reponse: 'Messages invalides.', sources: [], suggestions: SUGGESTIONS }, { status: 400 });
+    }
 
+    // Clé d'attente : la session si elle existe, sinon une clé commune aux visiteurs sans rapport
+    const sid = cookies.get(COOKIE_SID);
+    const cle = sid ?? 'anonyme';
+    if (enCours.has(cle)) {
+        return json({ statut: 'erreur', reponse: 'Une réponse est déjà en cours, patiente un instant.', sources: [], suggestions: SUGGESTIONS }, { status: 429 });
+    }
+
+    enCours.add(cle);
     const debut = Date.now();
     try {
-        // On ne retransmet que role + content (rien d'autre venant du client)
-        const propres = messages.map(({ role, content }) => ({ role, content }));
-        const rapport = lireSession(cookies.get(COOKIE_SID));
-
-        // Sources JSON d'abord : métiers proches de la dernière question (appellations de rome.json)
-        const derniere = [...propres].reverse().find((m) => m.role === 'user')?.content ?? '';
-        const proches = metiersProches(derniere);
-        const blocProches = proches.length
-            ? `\n\nMÉTIERS PROCHES TROUVÉS DANS ROME (liste officielle, ${proches[0].version}) :\n` +
-            proches.map((p) => `### ${p.libelle} (${p.code})\n${p.appellations.map((a) => `- ${a}`).join('\n')}`).join('\n\n') +
-            '\nQuand on demande les métiers autour d\'un métier, donne cette liste complète telle quelle, puis ajoute une courte phrase variée et personnalisée.'
-            : '';
-
-        const avecRapport = rapport || proches.length
-            ? [
-                {
-                    role: 'system',
-                    content:
-                        `${PROMPT_SYSTEME}\nPersonnalise ta réponse avec le rapport du jeune quand il existe : cite ses métiers par leur nom, sa zone et la durée de préparation, les pages du rapport, et cite les appellations ROME (métiers proches). Varie tes formulations. Ne t'appuie que sur les sources ci-dessous.` +
-                        (rapport ? `\n\nRAPPORT DU JEUNE ET FICHES ROME (sources) :\n${contexteRapport(rapport)}` : '') +
-                        blocProches
-                },
-                ...propres
-            ]
-            : propres;
-        const reponse = await chat(avecRapport, { timeoutMs: 120_000 });
-        return json({ reponse, ms: Date.now() - debut });
-    } catch (e) {
-        console.error('test-ollama :', e instanceof Error ? e.stack : e);
-        const code = e instanceof OllamaError ? e.code : 'INCONNUE';
-        return json({ erreur: e instanceof OllamaError ? e.message : 'Erreur inattendue.', code, ms: Date.now() - debut }, { status: 502 });
+        const resultat = await repondreQuestion(
+            {
+                // On ne retransmet que role + content (rien d'autre venant du client)
+                messages: messages.map(({ role, content }) => ({ role, content })),
+                rapport: lireSession(sid),
+                metierId: corps?.metierId
+            },
+            (msgs) => chat(msgs, { timeoutMs: 120_000, options: { temperature: 0.2 } })
+        );
+        return json({ ...resultat, reponse: resultat.reponse, ms: Date.now() - debut });
+    } finally {
+        enCours.delete(cle);
     }
 }
