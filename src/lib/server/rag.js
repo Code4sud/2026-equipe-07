@@ -221,6 +221,19 @@ export const MESSAGE_DETRESSE =
 // Sujets qu'on ne confie jamais au modèle (début de mots, pas de faux positifs sur les métiers)
 const SUJETS_SENSIBLES = /\b(suicid|dépress|automutil|idées noires|me faire du mal)/i;
 
+// Mode général : question libre sans source dans nos données (pas de rapport, métier non reconnu).
+// Le modèle peut répondre avec ses connaissances générales, mais sans chiffre ni détail officiel.
+export const PROMPT_GENERAL = `Tu es un assistant d'orientation pour des jeunes de 15 à 25 ans, au Centre des Possibles.
+Règles :
+- Tutoie le jeune. Phrases simples, niveau lycée. Réponse courte : 5 phrases maximum.
+- Aide-le à réfléchir à son orientation : explique, donne des pistes, pose une question pour mieux le connaître.
+- Reste général : n'invente aucun diplôme exact, établissement, salaire, durée, chiffre ou lien. Si tu n'es pas sûr, dis-le.
+- Tu n'as pas de source officielle pour cette question : ne mets pas de crochets [1] et ne prétends pas citer une source.
+- Hors orientation (santé, juridique, personnel) : réponds poliment que ce n'est pas ton rôle.`;
+
+export const NOTE_GENERALE =
+    "\n\nℹ️ Réponse générale, sans source officielle. Pour des informations fiables, importe ton rapport, cite un métier précis, ou consulte orientation-regionsud.fr.";
+
 /**
  * Source "vue d'ensemble" : zones du rapport et métiers proposés dans chacune.
  * @param {Rapport} rapport
@@ -241,6 +254,7 @@ function sourceVueEnsemble(rapport) {
  * Étape 1 : analyse de la question. Décide si on refuse, si on avoue ne pas savoir, ou si on appelle le modèle.
  * @param {{ question: unknown, rapport?: Rapport | null, metierId?: unknown }} demande
  * @returns {{ action: 'refuser' | 'repli', statut: string, reponse: string }
+ *   | { action: 'general', question: string }
  *   | { action: 'modele', question: string, metier: Metier | undefined, sources: Source[], romeVerifie: boolean }}
  */
 export function analyserQuestion({ question, rapport, metierId }) {
@@ -276,8 +290,8 @@ export function analyserQuestion({ question, rapport, metierId }) {
         });
     }
 
-    // Rien de fiable à reformuler : inutile de déranger le modèle
-    if (sources.length === 0) return { action: 'repli', statut: 'insuffisant', reponse: MESSAGE_REPLI };
+    // Aucune source : on ne bloque plus le jeune, le modèle répond en mode général (prudent, signalé)
+    if (sources.length === 0) return { action: 'general', question: v.question };
 
     return { action: 'modele', question: v.question, metier, sources, romeVerifie };
 }
@@ -292,23 +306,49 @@ export async function repondreQuestion({ messages, rapport, metierId }, appelerM
     const derniere = [...messages].reverse().find((m) => m.role === 'user');
     const analyse = analyserQuestion({ question: derniere?.content, rapport, metierId });
 
-    // Refus ou "je ne sais pas" décidés AVANT le modèle
-    if (analyse.action !== 'modele') {
+    // Refus décidé AVANT le modèle (question invalide, détresse)
+    if (analyse.action === 'refuser' || analyse.action === 'repli') {
         return { statut: analyse.statut, reponse: analyse.reponse, sources: [], suggestions: SUGGESTIONS };
     }
 
-    // Sources + question de CETTE fois, précédées de quelques tours pour garder le fil
+    // Quelques tours précédents pour garder le fil de la conversation
+    const precedents = messages
+        .slice(0, messages.lastIndexOf(/** @type {any} */ (derniere)))
+        .filter((m) => m.role === 'user' || m.role === 'assistant')
+        .slice(-6)
+        .map((m) => /** @type {Message} */ ({ role: m.role, content: m.content }));
+
+    // Mode général : pas de source, pas de citations à vérifier -> réponse prudente + note
+    if (analyse.action === 'general') {
+        try {
+            const brut = await appelerModele([
+                { role: 'system', content: PROMPT_GENERAL },
+                ...precedents,
+                { role: 'user', content: analyse.question }
+            ]);
+            const texte = typeof brut === 'string' ? brut.replace(/\[\d+(?:\s*,\s*\d+)*\]/g, '').trim() : ''; // pas de fausses citations
+            if (!texte) return { statut: 'insuffisant', reponse: MESSAGE_REPLI, sources: [], suggestions: SUGGESTIONS };
+            return { statut: 'general', reponse: texte + NOTE_GENERALE, sources: [], suggestions: SUGGESTIONS };
+        } catch (err) {
+            console.error('Appel au modèle impossible :', /** @type {Error} */ (err).message);
+            return {
+                statut: 'erreur',
+                reponse: "L'assistant n'est pas disponible pour le moment. Réessaie dans un instant.",
+                sources: [],
+                suggestions: SUGGESTIONS
+            };
+        }
+    }
+
+    if (analyse.action !== 'modele') return { statut: 'erreur', reponse: MESSAGE_REPLI, sources: [], suggestions: SUGGESTIONS }; // inatteignable, aide le typage
+
+    // Mode sourcé : sources + question de CETTE fois
     const [systeme, final] = construireMessages(
         analyse.question,
         analyse.metier ?? /** @type {Metier} */ ({ intitule: 'non précisé (question libre)' }),
         analyse.sources,
         analyse.romeVerifie
     );
-    const precedents = messages
-        .slice(0, messages.lastIndexOf(/** @type {any} */ (derniere)))
-        .filter((m) => m.role === 'user' || m.role === 'assistant')
-        .slice(-6)
-        .map((m) => /** @type {Message} */ ({ role: m.role, content: m.content }));
 
     let brut;
     try {
